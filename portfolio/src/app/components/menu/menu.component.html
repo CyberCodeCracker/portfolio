@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="d-flex" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "HOME" | translate }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/projects"
+            routerLinkActive="active"
+            >{{ "PROJECTS" | translate }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/skills" routerLinkActive="active">{{
+            "SKILLS" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/quizz" routerLinkActive="active">{{
+            "QUIZZ" | translate
+          }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{
+            "CONTACT" | translate
+          }}</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ "LANGUAGE" | translate }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" (click)="onChangeLanguage('en')">En</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="onChangeLanguage('fr')">Fr</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
