@@ -6,6 +6,7 @@
   "DESCRIPTION": "This is a sample description in English.",
   "SKILLS": "Skills",
   "CONTACT_ME": "Contact Me",
-  "QUIZZ" :"Quizz",
-  "LANGUAGE": "Language"
+  "QUIZZ": "Quizz",
+  "LANGUAGE": "Language",
+  "ABOUT": "Full Stack Developer | Angular | Spring Boot | .NET | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it’s not just about code. When I’m not engineering software, you’ll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it’s all about constant growth — in tech, in strength, and in life."
 }
