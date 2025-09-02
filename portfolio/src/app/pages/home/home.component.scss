@@ -1,48 +1,71 @@
+$primary-color: #d79720;
+
 .custom-container {
+  background-color: $primary-color;
   max-width: 70vw;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  display: flex;
   margin: 20px auto;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "intro photo"
+    "rest  rest";
+  column-gap: 24px;
+  row-gap: 16px;
+  position: relative;
 }
 
-.about {
-  max-width: 50%;
-  min-height: 160px; // Prevents container collapse
+.intro {
+  grid-area: intro;
+}
+.photo {
+  grid-area: photo;
+}
+.rest {
+  grid-area: rest;
+}
+
+/* Make the small programming icon in the intro tiny */
+.intro > img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 8px;
+}
+
+/* Keep the first intro line on the same line as the icon */
+.intro .typed-out {
+  display: inline;
 }
 
 .img-fluid {
-  max-width: 75%;
+  padding: 10px;
+  width: 260px;
+  max-width: 30vw;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .typed-out {
-  display: block; 
+  display: block;
   line-height: 1.6;
   color: #333;
   white-space: pre-line;
   text-wrap: pretty;
-  padding: 10px;
   font-size: 1.6rem;
-}
-
-.typed-line {
-  display: inline-block;
-  border-right: 0.15em solid orange;
-  animation: blink-caret .75s step-end infinite;
 }
 
 .image-animated {
   animation: slideInFromRight 0.8s ease-out forwards;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: orange; }
+#intro {
+  margin-left: 10px !important;
 }
 
 @keyframes slideInFromRight {
@@ -58,16 +81,16 @@
 
 @media (max-width: 768px) {
   .custom-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "intro"
+      "rest";
     text-align: center;
   }
 
-  .about {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
   .img-fluid {
-    max-width: 50%;
+    width: 180px;
+    max-width: 60vw;
   }
 }

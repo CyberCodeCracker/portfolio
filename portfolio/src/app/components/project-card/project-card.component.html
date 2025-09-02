@@ -1,0 +1,23 @@
+<!-- project-card.component.html -->
+<div class="project-container slide-in">
+  <img [src]="projectImageUrl" [alt]="projectTitle" class="project-image" />
+  <h3>{{ projectTitle }}</h3>
+  <p>{{ projectShortDescription }}</p>
+
+  <div class="actions">
+    <a
+      *ngIf="projectUrl !== 'Project is private' && projectUrl !== 'Projet privé'"
+      [href]="projectUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-link"
+    >
+      {{ 'VIEW_PROJECT' | translate }}
+    </a>
+    <span *ngIf="projectUrl === 'Project is private' || projectUrl === 'Projet privé'" class="project-link">{{ projectUrl }}</span>
+
+    <button type="button" class="view-btn" (click)="openDialog()">
+      {{ 'VIEW_DETAILS' | translate }}
+    </button>
+  </div>
+</div>

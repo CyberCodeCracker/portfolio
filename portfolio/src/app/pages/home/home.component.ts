@@ -12,7 +12,8 @@ import { Subscription } from 'rxjs';
   imports: [HeaderComponent, TranslateModule]
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('typedOut', { static: false }) typedOut!: ElementRef;
+  @ViewChild('typedIntro', { static: false }) typedIntro!: ElementRef;
+  @ViewChild('typedRest', { static: false }) typedRest!: ElementRef;
   private langChangeSubscription!: Subscription;
   private typingTimeout: any;
 
@@ -31,21 +32,35 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     }
 
     this.translate.get('ABOUT').subscribe((text: string) => {
-      const element = this.typedOut.nativeElement;
-      const lines = text.split('\n').filter((line: string) => line.trim() !== '');
+      const introEl: HTMLElement = this.typedIntro.nativeElement;
+      const restEl: HTMLElement = this.typedRest.nativeElement;
 
-      element.textContent = '';
-      this.typeLineByLine(element, lines, 0);
+      const lines = text
+        .replace(/\r\n/g, '\n')
+        .split('\n')
+        .filter((line: string) => line.trim() !== '');
+
+      const introLines = lines.slice(0, 2);
+      const restLines = lines.slice(2);
+
+      introEl.textContent = '';
+      restEl.textContent = '';
+
+      this.typeLines(introEl, introLines, 0, () => {
+        this.typeLines(restEl, restLines, 0);
+      });
     });
   }
 
-  private typeLineByLine(element: HTMLElement, lines: string[], lineIdx: number) {
-    if (lineIdx >= lines.length) return;
+  private typeLines(element: HTMLElement, lines: string[], lineIdx: number, done?: () => void) {
+    if (lineIdx >= lines.length) {
+      if (done) done();
+      return;
+    }
 
     const lineSpan = document.createElement('span');
-    lineSpan.classList.add('typed-line', 'typing'); // Add 'typing' for cursor
+    lineSpan.classList.add('typed-line');
     element.appendChild(lineSpan);
-    element.appendChild(document.createElement('br'));
 
     let charIdx = 0;
     const typeChar = () => {
@@ -54,9 +69,9 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
         charIdx++;
         this.typingTimeout = setTimeout(typeChar, 15);
       } else {
-        lineSpan.classList.remove('typing'); // Remove cursor
+        element.appendChild(document.createElement('br'));
         this.typingTimeout = setTimeout(() => {
-          this.typeLineByLine(element, lines, lineIdx + 1);
+          this.typeLines(element, lines, lineIdx + 1, done);
         }, 100);
       }
     };

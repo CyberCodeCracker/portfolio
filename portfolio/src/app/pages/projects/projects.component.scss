@@ -1,0 +1,141 @@
+/* projects.component.scss */
+.projects {
+  /* Match Home .custom-container proportions and look */
+  max-width: 70vw;
+  margin: 20px auto;
+  background-color: #d79720; /* same as $primary-color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 24px;
+}
+
+.project-container {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-container h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.project-container p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.project-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-container a:hover {
+  text-decoration: underline;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    max-width: 100%;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Full-screen modal styles (parent-scoped) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* dim but still visible */
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #111;
+  width: 90%;
+  max-width: 680px; /* compact width */
+  max-height: 85vh;
+  overflow: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  z-index: 1001;
+}
+
+.dialog h3 {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.dialog-animate {
+  animation: popIn 200ms ease-out;
+}
+
+@keyframes popIn {
+  from { transform: translate(-50%, -50%) scale(0.96); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.dialog-image {
+  width: 100%;
+  height: auto; /* keep aspect ratio */
+  max-height: 60vh; /* fit within viewport */
+  object-fit: contain; /* avoid cropping */
+  border-radius: 8px;
+  display: block;
+  margin: 12px auto;
+  background: #f3f3f3;
+}
+
+.dialog-description {
+  white-space: pre-line; /* respect newlines from i18n */
+  margin-bottom: 16px;
+}
+
+.dialog a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dialog a:hover {
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
