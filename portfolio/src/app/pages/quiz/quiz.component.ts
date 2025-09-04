@@ -10,7 +10,7 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, HeaderComponent],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })

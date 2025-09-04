@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { QuizComponent } from './pages/quizz/quiz.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 import { MainComponent } from './components/main/main.component';
 
 const routeConfig: Routes = [

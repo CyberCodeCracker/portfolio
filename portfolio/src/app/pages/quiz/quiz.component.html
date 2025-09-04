@@ -2,7 +2,7 @@
 <section class="quiz">
   <h2>{{ 'QUIZ.TITLE' | translate }}</h2>
   <div *ngIf="!quizCompleted" class="question-container slide-in">
-    <h3>{{ questions[currentQuestionIndex]?.question }}</h3>
+    <h3>{{ questions[currentQuestionIndex].question }}</h3>
     <div class="options">
       <div *ngFor="let option of questions[currentQuestionIndex]?.options; let i = index">
         <input
