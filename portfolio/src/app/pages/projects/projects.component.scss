@@ -1,9 +1,9 @@
-/* projects.component.scss */
+$primary-color: #d79720;
+
 .projects {
-  /* Match Home .custom-container proportions and look */
   max-width: 70vw;
   margin: 20px auto;
-  background-color: #d79720; /* same as $primary-color */
+  background-color: $primary-color; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 16px;

@@ -6,7 +6,7 @@
   "DESCRIPTION": "Ceci est une description d'exemple en français.",
   "SKILLS": "Compétences",
   "CONTACT_ME": "Me contacter",
-  "QUIZZ": "Quiz",
+  "QUIZ_TITLE": "Quiz",
   "LANGUAGE": "Langue",
   "VIEW_PROJECT": "Voir le projet",
   "VIEW_DETAILS": "Voir les détails",
@@ -54,5 +54,97 @@
       "IMAGE_URL": "assets/imgs/progress.webp",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear"
     }
-  ]
+  ],
+
+  "QUIZ": {
+    "TITLE": "Quiz de culture générale",
+    "SUBMIT": "Soumettre",
+    "NEXT": "Suivant",
+    "PREVIOUS": "Précédent",
+    "RESULT": "Votre score : {{score}}/{{total}}",
+    "CORRECT": "Correct !",
+    "INCORRECT": "Incorrect. La bonne réponse est {{correct}}. <span class=\"explanation\">{{explanation}}</span>",
+    "QUESTIONS": [
+      {
+        "question": "Quelle est la capitale du Brésil ?",
+        "options": [
+          "A) Rio de Janeiro",
+          "B) São Paulo",
+          "C) Brasília",
+          "D) Salvador"
+        ],
+        "correct_answer": "C",
+        "explanation": "Brasília est la capitale du Brésil, conçue par Oscar Niemeyer et établie en 1960 pour déplacer la capitale à l'intérieur des terres depuis Rio de Janeiro."
+      },
+      {
+        "question": "Quelle planète est connue sous le nom de Planète Rouge en raison de son apparence rougeâtre ?",
+        "options": ["A) Jupiter", "B) Mars", "C) Vénus", "D) Mercure"],
+        "correct_answer": "B",
+        "explanation": "Mars est appelée la Planète Rouge en raison de sa surface rougeâtre, causée par l'oxyde de fer (rouille) sur son terrain."
+      },
+      {
+        "question": "Qui a peint la Joconde ?",
+        "options": [
+          "A) Vincent van Gogh",
+          "B) Pablo Picasso",
+          "C) Léonard de Vinci",
+          "D) Claude Monet"
+        ],
+        "correct_answer": "C",
+        "explanation": "Léonard de Vinci a peint la Joconde vers 1503-1506, célèbre pour son fond détaillé et son sourire énigmatique."
+      },
+      {
+        "question": "Quel est le symbole chimique de l'or ?",
+        "options": ["A) Ag", "B) Au", "C) Fe", "D) Cu"],
+        "correct_answer": "B",
+        "explanation": "Au est le symbole chimique de l'or, dérivé du mot latin 'aurum', signifiant aube brillante."
+      },
+      {
+        "question": "Quel pays a accueilli les Jeux olympiques d'été de 2016 ?",
+        "options": ["A) Chine", "B) Brésil", "C) Japon", "D) Royaume-Uni"],
+        "correct_answer": "B",
+        "explanation": "Le Brésil a accueilli les Jeux olympiques d'été de 2016 à Rio de Janeiro, marquant la première fois que l'Amérique du Sud accueillait l'événement."
+      },
+      {
+        "question": "Quel est le plus grand mammifère du monde ?",
+        "options": [
+          "A) Baleine bleue",
+          "B) Éléphant d'Afrique",
+          "C) Girafe",
+          "D) Grand requin blanc"
+        ],
+        "correct_answer": "A",
+        "explanation": "La baleine bleue (Balaenoptera musculus) est le plus grand mammifère, atteignant jusqu'à 30 mètres de long et pesant jusqu'à 200 tonnes."
+      },
+      {
+        "question": "En quelle année le Titanic a-t-il coulé ?",
+        "options": ["A) 1905", "B) 1912", "C) 1920", "D) 1898"],
+        "correct_answer": "B",
+        "explanation": "Le Titanic a coulé le 15 avril 1912 après avoir heurté un iceberg lors de son voyage inaugural, entraînant plus de 1 500 morts."
+      },
+      {
+        "question": "Quel langage de programmation a été créé en premier ?",
+        "options": ["A) Python", "B) Java", "C) C++", "D) Fortran"],
+        "correct_answer": "D",
+        "explanation": "Fortran, développé dans les années 1950 par IBM, est l'un des premiers langages de programmation, précédant C++ (années 1980), Java (1995) et Python (1990)."
+      },
+      {
+        "question": "Quel est le plus long fleuve du monde ?",
+        "options": ["A) Amazone", "B) Nil", "C) Yangtsé", "D) Mississippi"],
+        "correct_answer": "B",
+        "explanation": "Le Nil, long d'environ 6 650 km, est considéré comme le plus long fleuve, traversant l'Afrique du Nord-Est."
+      },
+      {
+        "question": "Qui a écrit la pièce 'Roméo et Juliette' ?",
+        "options": [
+          "A) William Shakespeare",
+          "B) Charles Dickens",
+          "C) Jane Austen",
+          "D) Mark Twain"
+        ],
+        "correct_answer": "A",
+        "explanation": "William Shakespeare a écrit 'Roméo et Juliette' vers 1597, une tragédie célèbre sur deux jeunes amoureux issus de familles rivales."
+      }
+    ]
+  }
 }

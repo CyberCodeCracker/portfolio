@@ -7,7 +7,6 @@ import { HeaderComponent } from 'src/app/components/header/header.component';
 import { ProjectCardComponent } from 'src/app/components/project-card/project-card.component';
 import { Project, ProjectService } from 'src/app/services/project.service';
 
-
 @Component({
   standalone: true,
   selector: 'app-projects',

@@ -1,0 +1,33 @@
+<!-- quiz.component.html -->
+<section class="quiz">
+  <h2>{{ 'QUIZ.TITLE' | translate }}</h2>
+  <div *ngIf="!quizCompleted" class="question-container slide-in">
+    <h3>{{ questions[currentQuestionIndex]?.question }}</h3>
+    <div class="options">
+      <div *ngFor="let option of questions[currentQuestionIndex]?.options; let i = index">
+        <input
+          type="radio"
+          [id]="'option-' + i"
+          [name]="'answer'"
+          [value]="option.charAt(0)"
+          [(ngModel)]="selectedAnswer"
+          (change)="selectAnswer(option.charAt(0))"
+          [disabled]="showFeedback"
+        />
+        <label [for]="'option-' + i">{{ option }}</label>
+      </div>
+    </div>
+    <div *ngIf="showFeedback" class="feedback">
+      <p *ngIf="isCorrect">{{ 'QUIZ.CORRECT' | translate }}</p>
+      <p *ngIf="!isCorrect" class="incorrect-text" [innerHTML]="'QUIZ.INCORRECT' | translate: { correct: questions[currentQuestionIndex].correct_answer, explanation: questions[currentQuestionIndex].explanation }"></p>
+    </div>
+    <div class="navigation">
+      <button *ngIf="currentQuestionIndex > 0" (click)="previousQuestion()">{{ 'QUIZ.PREVIOUS' | translate }}</button>
+      <button [disabled]="!selectedAnswer || showFeedback" (click)="submitAnswer()">{{ 'QUIZ.SUBMIT' | translate }}</button>
+    </div>
+  </div>
+  <div *ngIf="quizCompleted" class="result slide-in" [ngClass]="{'happy-animation': showHappyAnimation}">
+    <h3>{{ 'QUIZ.RESULT' | translate: { score: score, total: questions.length } }}</h3>
+    <button (click)="resetQuiz()">Try Again</button>
+  </div>
+</section>

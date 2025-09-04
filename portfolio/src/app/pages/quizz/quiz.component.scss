@@ -1,0 +1,242 @@
+$primary-color: #d79720;
+$button-color: #006666; // Dark teal for buttons and hover
+$button-hover-color: #004d4d; // Darker teal for button hover
+$confetti-color-1: #b37400; // Darker orange for confetti
+$confetti-color-2: #e6b800; // Warm yellow for confetti
+$explanation-color: #8b0000; // Deep red for incorrect explanation (good contrast on orange)
+
+.quiz {
+  max-width: 70vw;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.quiz h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-container {
+  background: $primary-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.question-container h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.options div {
+  display: flex;
+  align-items: center;
+}
+
+.options input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.options input:disabled {
+  cursor: not-allowed;
+}
+
+.options label {
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.options label:hover {
+  color: $button-color;
+}
+
+/* Slide-in animation (left to right) to match project cards */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-24px);
+  animation: slideIn 500ms ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.feedback {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background: #e9ecef;
+}
+
+.feedback p:first-child {
+  margin: 0;
+  font-weight: bold;
+  color: #28a745; // Green for correct
+}
+
+.feedback p:nth-child(2) {
+  margin: 5px 0 0;
+}
+
+.feedback .incorrect-text {
+  color: $explanation-color; // Deep accessible red for incorrect/explanation text
+  display: block; // Ensure explanation is on a new line
+  font-weight: 600;
+}
+
+.navigation {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  background: $button-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navigation button:hover:not(:disabled) {
+  background: $button-hover-color;
+}
+
+.navigation button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.result {
+  text-align: center;
+  background: $primary-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.result h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+.result button {
+  padding: 10px 20px;
+  background: $button-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.result button:hover {
+  background: $button-hover-color;
+}
+
+.happy-animation {
+  animation: bounce 0.5s ease-in-out 2;
+  position: relative;
+}
+
+.happy-animation::before,
+.happy-animation::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $confetti-color-1;
+  z-index: 10;
+  animation: confetti 2s ease-in-out infinite;
+}
+
+.happy-animation::before {
+  top: -10px;
+  left: 20%;
+  animation-delay: 0.2s;
+  background: $confetti-color-2;
+}
+
+.happy-animation::after {
+  top: -10px;
+  right: 20%;
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(-100%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .quiz {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .question-container h3 {
+    font-size: 1.4rem;
+  }
+
+  .options label {
+    font-size: 1rem;
+  }
+
+  .navigation button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .result h3 {
+    font-size: 1.4rem;
+  }
+
+  .result button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .happy-animation::before,
+  .happy-animation::after {
+    width: 8px;
+    height: 8px;
+  }
+}
