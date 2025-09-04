@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class MenuComponent {
   private translateService = inject(TranslateService);
-
+  language = "(" +localStorage.getItem('language') || 'en' + ")";
   constructor() {
     this.translateService.setDefaultLang('en');
     const savedLang = localStorage.getItem('language') || 'en';
