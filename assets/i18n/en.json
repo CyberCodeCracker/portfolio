@@ -1,0 +1,150 @@
+{
+  "PROJECTS": "Projects",
+  "HOME": "Home",
+  "CONTACT": "Contact",
+  "WELCOME_MESSAGE": "Welcome to my portfolio!",
+  "DESCRIPTION": "This is a sample description in English.",
+  "SKILLS": "Skills",
+  "CONTACT_ME": "Contact Me",
+  "QUIZ_TITLE": "Quiz",
+  "LANGUAGE": "Language",
+  "VIEW_PROJECT": "View project",
+  "VIEW_DETAILS": "View details",
+  "ABOUT": "Full Stack Developer | Angular | Spring Boot | .NET | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it’s not just about code. When I’m not engineering software, you’ll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it’s all about constant growth — in tech, in strength, and in life.",
+  "PROJECTS_LIST": [
+    {
+      "TITLE": "Showroom",
+      "SHORT_DESCRIPTION": "Manage inventory, clients, user accounts, and sales history — built with Angular & .NET.",
+      "DESCRIPTION": "As part of my summer internship, I developed a Management Web Application designed to handle stock, client records, user administration, and sales history in a centralized system.\n\nThe platform ensures accurate inventory tracking, reliable client management, and role-based access for different types of web users.\n\nBuilt with Angular on the frontend for an interactive and user-friendly experience and .NET on the backend for secure APIs and solid business logic, the application streamlines daily operations, improves data consistency, and provides clear insights through historical sales tracking and reporting.",
+      "IMAGE_URL": "assets/imgs/showroom.jpg",
+      "PROJECT_URL": "Project is private"
+    },
+    {
+      "TITLE": "Book Social Network",
+      "SHORT_DESCRIPTION": "A social platform for book lovers to share their books, built with Angular & Spring Boot.",
+      "DESCRIPTION": "Book Social Network is a full-stack application that enables users to manage their book collections and engage with a community of book enthusiasts.\n\nIt offers features such as user registration, secure email validation, book management (including creation, updating, sharing, and archiving), book borrowing with checks for availability, book return functionality, and approval of book returns.\n\nThe application ensures security using JWT tokens and adheres to best practices in REST API design. The backend is built with Spring Boot 3 and Spring Security 6, while the frontend is developed using Angular with Bootstrap for styling.",
+      "IMAGE_URL": "assets/imgs/bsn.png",
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Book-Network"
+    },
+    {
+      "TITLE": "Investment Calculator",
+      "SHORT_DESCRIPTION": "A web app to calculate investment growth over time, built with Angular.",
+      "DESCRIPTION": "The Investment Calculator is a web application designed to help users estimate the future value of their investments based on various parameters.\n\nUsers can input details such as the initial investment amount, monthly contributions, expected annual return rate, and investment duration.\n\nThe application then calculates and displays the projected growth of the investment over time, providing insights into how different factors can impact the final amount.\n\nThis tool is particularly useful for individuals planning their financial future and seeking to understand the potential outcomes of their investment strategies.\n\nBuilt with Angular, the application features a user-friendly interface that allows for easy data entry and visualization of results.",
+      "IMAGE_URL": "assets/imgs/investment.png",
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Investment-Calculator"
+    },
+    {
+      "TITLE": "Get Fit",
+      "SHORT_DESCRIPTION": "A fitness tracking app to log workouts, built with Angular.",
+      "DESCRIPTION": "Get Fit is a web application designed to help users track and manage their fitness routines effectively.\n\nThe app allows users to create and log various types of workouts, including strength training, cardio, and flexibility exercises.\n\nWith an intuitive interface built using Angular, Get Fit provides a seamless experience for users to stay motivated and committed to their fitness journey.",
+      "IMAGE_URL": "assets/imgs/fit.png",
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/GetFit"
+    },
+    {
+      "TITLE": "TO-DO",
+      "SHORT_DESCRIPTION": "A simple task management app to organize your to-dos, built with Angular.",
+      "DESCRIPTION": "TO-DO is a straightforward web application designed to help users manage their daily tasks efficiently.\n\nThe app allows users to create, edit, and delete tasks, providing a simple interface to keep track of what needs to be done.\n\nBuilt with Angular, TO-DO offers a clean and user-friendly experience, making it easy for users to organize their to-dos and stay productive throughout the day.",
+      "IMAGE_URL": "assets/imgs/to-do.png",
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do"
+    },
+    {
+      "TITLE": "FitGear",
+      "SHORT_DESCRIPTION": "An interactive platform where coaches can use the powers of online-coaching to tutor their clients, built with Angular & Spring Boot.",
+      "DESCRIPTION": "FitGear is a comprehensive web application designed to facilitate online coaching and fitness management.\n\nThe platform allows coaches to create and manage workout programs and diet plans, track client progress, and communicate effectively with their clients.\n\nClients can log their workouts, monitor their progress, and receive personalized coaching from their trainers.\n\nBuilt with Angular for the frontend and Spring Boot for the backend, FitGear offers a seamless and interactive experience for both coaches and clients, making it easier to achieve fitness goals through structured guidance and support.",
+      "IMAGE_URL": "assets/imgs/progress.webp",
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear"
+    }
+  ],
+
+  "QUIZ": {
+    "TITLE": "General Knowledge Quiz",
+    "SUBMIT": "Submit",
+    "NEXT": "Next",
+    "PREVIOUS": "Previous",
+    "RESULT": "Your Score: {{score}}/{{total}}",
+    "CORRECT": "Correct!",
+    "INCORRECT": "Incorrect. The correct answer is {{correct}}. <span class=\"explanation\">{{explanation}}</span>",
+    "QUESTIONS": [
+      {
+        "question": "What is the capital city of Brazil?",
+        "options": [
+          "A) Rio de Janeiro",
+          "B) São Paulo",
+          "C) Brasília",
+          "D) Salvador"
+        ],
+        "correct_answer": "C",
+        "explanation": "Brasília is the capital of Brazil, designed by Oscar Niemeyer and established in 1960 to move the capital inland from Rio de Janeiro."
+      },
+      {
+        "question": "Which planet is known as the Red Planet due to its reddish appearance?",
+        "options": ["A) Jupiter", "B) Mars", "C) Venus", "D) Mercury"],
+        "correct_answer": "B",
+        "explanation": "Mars is called the Red Planet because of its reddish surface, caused by iron oxide (rust) on its terrain."
+      },
+      {
+        "question": "Who painted the Mona Lisa?",
+        "options": [
+          "A) Vincent van Gogh",
+          "B) Pablo Picasso",
+          "C) Leonardo da Vinci",
+          "D) Claude Monet"
+        ],
+        "correct_answer": "C",
+        "explanation": "Leonardo da Vinci painted the Mona Lisa around 1503–1506, famous for its detailed background and enigmatic smile."
+      },
+      {
+        "question": "What is the chemical symbol for gold?",
+        "options": ["A) Ag", "B) Au", "C) Fe", "D) Cu"],
+        "correct_answer": "B",
+        "explanation": "Au is the chemical symbol for gold, derived from the Latin word 'aurum,' meaning shining dawn."
+      },
+      {
+        "question": "Which country hosted the 2016 Summer Olympics?",
+        "options": ["A) China", "B) Brazil", "C) Japan", "D) United Kingdom"],
+        "correct_answer": "B",
+        "explanation": "Brazil hosted the 2016 Summer Olympics in Rio de Janeiro, marking the first time South America hosted the event."
+      },
+      {
+        "question": "What is the largest mammal in the world?",
+        "options": [
+          "A) Blue Whale",
+          "B) African Elephant",
+          "C) Giraffe",
+          "D) Great White Shark"
+        ],
+        "correct_answer": "A",
+        "explanation": "The blue whale (Balaenoptera musculus) is the largest mammal, growing up to 100 feet (30 meters) in length and weighing as much as 200 tons."
+      },
+      {
+        "question": "In which year did the Titanic sink?",
+        "options": ["A) 1905", "B) 1912", "C) 1920", "D) 1898"],
+        "correct_answer": "B",
+        "explanation": "The Titanic sank on April 15, 1912, after hitting an iceberg on its maiden voyage, resulting in over 1,500 deaths."
+      },
+      {
+        "question": "Which programming language was created first?",
+        "options": ["A) Python", "B) Java", "C) C++", "D) Fortran"],
+        "correct_answer": "D",
+        "explanation": "Fortran, developed in the 1950s by IBM, is one of the earliest programming languages, predating C++ (1980s), Java (1995), and Python (1990)."
+      },
+      {
+        "question": "What is the longest river in the world?",
+        "options": ["A) Amazon", "B) Nile", "C) Yangtze", "D) Mississippi"],
+        "correct_answer": "B",
+        "explanation": "The Nile River, at approximately 6,650 km, is considered the longest river, flowing through northeastern Africa."
+      },
+      {
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "options": [
+          "A) William Shakespeare",
+          "B) Charles Dickens",
+          "C) Jane Austen",
+          "D) Mark Twain"
+        ],
+        "correct_answer": "A",
+        "explanation": "William Shakespeare wrote 'Romeo and Juliet' around 1597, a tragic play about two young lovers from feuding families."
+      }
+    ]
+  }
+}
