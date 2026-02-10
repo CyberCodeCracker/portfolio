@@ -2,6 +2,8 @@
   "PROJECTS": "Projets",
   "HOME": "Accueil",
   "CONTACT": "Contact",
+  "EDUCATION": "Éducation",
+  "EXPERIENCE": "Expérience",
   "WELCOME_MESSAGE": "Bienvenue dans mon portfolio !",
   "DESCRIPTION": "Ceci est une description d'exemple en français.",
   "SKILLS": "Compétences",
@@ -10,6 +12,7 @@
   "LANGUAGE": "Langue",
   "VIEW_PROJECT": "Voir le projet",
   "VIEW_DETAILS": "Voir les détails",
+  "WATCH_DEMO": "Voir la démo",
   "ABOUT": "Développeur Full Stack | Angular | Spring Boot | .NET | Passionné de DevOps\n\nJe construis des applications web évolutives, propres et efficaces, reliant les expériences front-end et la logique back-end. Ma stack tourne autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me motivent.\n\nMais il ne s'agit pas seulement de coder. Quand je ne développe pas de logiciels, vous me trouverez probablement à la salle de sport, soulevant des poids, poursuivant la même discipline et progression que j'apporte au développement.\n\nPour moi, tout est une question de croissance continue — en technologie, en force et dans la vie.",
   "PROJECTS_LIST": [
     {
@@ -17,42 +20,48 @@
       "SHORT_DESCRIPTION": "Gérez les stocks, les clients, les comptes utilisateurs et l'historique des ventes — construit avec Angular et .NET.",
       "DESCRIPTION": "Dans le cadre de mon stage d'été, j'ai développé une application web de gestion conçue pour gérer les stocks, les dossiers clients, l'administration des utilisateurs et l'historique des ventes dans un système centralisé.\n\nLa plateforme garantit un suivi précis des stocks, une gestion fiable des clients et un accès basé sur les rôles pour différents types d'utilisateurs web.\n\nConstruite avec Angular pour une expérience front-end interactive et conviviale et .NET pour des API sécurisées et une logique métier robuste, l'application rationalise les opérations quotidiennes, améliore la cohérence des données et fournit des informations claires grâce au suivi et aux rapports sur l'historique des ventes.",
       "IMAGE_URL": "assets/imgs/showroom.jpg",
-      "PROJECT_URL": "Projet privé"
+      "PROJECT_URL": "Projet privé",
+      "VIDEO_URL": ""
     },
     {
       "TITLE": "Réseau social pour livres",
       "SHORT_DESCRIPTION": "Une plateforme sociale pour les amateurs de livres pour partager leurs collections, construite avec Angular et Spring Boot.",
       "DESCRIPTION": "Réseau social pour livres est une application full-stack qui permet aux utilisateurs de gérer leurs collections de livres et d'interagir avec une communauté d'amateurs de livres.\n\nElle offre des fonctionnalités telles que l'inscription des utilisateurs, la validation sécurisée par e-mail, la gestion des livres (y compris la création, la mise à jour, le partage et l'archivage), l'emprunt de livres avec vérification de la disponibilité, la restitution des livres et l'approbation des retours.\n\nL'application garantit la sécurité à l'aide de jetons JWT et respecte les meilleures pratiques de conception d'API REST. Le backend est construit avec Spring Boot 3 et Spring Security 6, tandis que le frontend est développé avec Angular et Bootstrap pour le style.",
       "IMAGE_URL": "assets/imgs/bsn.png",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/Book-Network"
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Book-Network",
+      "VIDEO_URL": ""
     },
     {
       "TITLE": "Calculateur d'investissement",
       "SHORT_DESCRIPTION": "Une application web pour calculer la croissance des investissements au fil du temps, construite avec Angular.",
       "DESCRIPTION": "Le Calculateur d'investissement est une application web conçue pour aider les utilisateurs à estimer la valeur future de leurs investissements en fonction de divers paramètres.\n\nLes utilisateurs peuvent saisir des détails tels que le montant initial de l'investissement, les contributions mensuelles, le taux de rendement annuel attendu et la durée de l'investissement.\n\nL'application calcule et affiche ensuite la croissance projetée de l'investissement au fil du temps, offrant des informations sur la manière dont différents facteurs peuvent impacter le montant final.\n\nCet outil est particulièrement utile pour les personnes planifiant leur avenir financier et cherchant à comprendre les résultats potentiels de leurs stratégies d'investissement.\n\nConstruite avec Angular, l'application propose une interface conviviale facilitant la saisie des données et la visualisation des résultats.",
       "IMAGE_URL": "assets/imgs/investment.png",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/Investment-Calculator"
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Investment-Calculator",
+      "VIDEO_URL": ""
     },
     {
       "TITLE": "Get Fit",
       "SHORT_DESCRIPTION": "Une application de suivi de fitness pour enregistrer les entraînements, construite avec Angular.",
       "DESCRIPTION": "Get Fit est une application web conçue pour aider les utilisateurs à suivre et gérer efficacement leurs routines de fitness.\n\nL'application permet aux utilisateurs de créer et d'enregistrer divers types d'entraînements, y compris l'entraînement de force, le cardio et les exercices de flexibilité.\n\nAvec une interface intuitive construite avec Angular, Get Fit offre une expérience fluide pour que les utilisateurs restent motivés et engagés dans leur parcours de fitness.",
       "IMAGE_URL": "assets/imgs/fit.png",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/GetFit"
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/GetFit",
+      "VIDEO_URL": ""
     },
     {
       "TITLE": "TO-DO",
       "SHORT_DESCRIPTION": "Une application simple de gestion des tâches pour organiser vos to-dos, construite avec Angular.",
       "DESCRIPTION": "TO-DO est une application web simple conçue pour aider les utilisateurs à gérer leurs tâches quotidiennes efficacement.\n\nL'application permet aux utilisateurs de créer, modifier et supprimer des tâches, offrant une interface simple pour suivre ce qui doit être fait.\n\nConstruite avec Angular, TO-DO propose une expérience propre et conviviale, facilitant l'organisation des tâches et la productivité tout au long de la journée.",
       "IMAGE_URL": "assets/imgs/to-do.png",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do"
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do",
+      "VIDEO_URL": ""
     },
     {
       "TITLE": "FitGear",
       "SHORT_DESCRIPTION": "Une plateforme interactive où les coachs peuvent utiliser le pouvoir du coaching en ligne pour accompagner leurs clients, construite avec Angular et Spring Boot.",
       "DESCRIPTION": "FitGear est une application web complète conçue pour faciliter le coaching en ligne et la gestion de fitness.\n\nLa plateforme permet aux coachs de créer et gérer des programmes d'entraînement et des plans alimentaires, de suivre les progrès des clients et de communiquer efficacement avec eux.\n\nLes clients peuvent enregistrer leurs entraînements, suivre leurs progrès et recevoir un coaching personnalisé de leurs entraîneurs.\n\nConstruite avec Angular pour le frontend et Spring Boot pour le backend, FitGear offre une expérience fluide et interactive pour les coachs et les clients, facilitant l'atteinte des objectifs de fitness grâce à un accompagnement structuré.",
       "IMAGE_URL": "assets/imgs/progress.webp",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear"
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
+      "VIDEO_URL": ""
     }
   ],
 
