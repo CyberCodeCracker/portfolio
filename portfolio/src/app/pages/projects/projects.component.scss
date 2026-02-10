@@ -1,51 +1,13 @@
-$primary-color: #d79720;
-
 .projects {
   max-width: 70vw;
-  margin: 20px auto;
-  background-color: $primary-color; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  padding: 16px;
+  margin: 100px auto 30px;
+  padding: 2rem;
 }
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}
-
-.project-container {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.project-container h3 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
-}
-
-.project-container p {
-  margin: 0 0 10px;
-  font-size: 1rem;
-}
-
-.project-container a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.project-container a:hover {
-  text-decoration: underline;
-}
-
-.project-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -56,19 +18,20 @@ $primary-color: #d79720;
 
 @media (max-width: 768px) {
   .projects {
-    max-width: 100%;
+    max-width: 95%;
+    margin-top: 90px;
   }
   .project-list {
     grid-template-columns: 1fr;
   }
 }
 
-/* Full-screen modal styles (parent-scoped) */
+/* ===== Full-screen modal ===== */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* dim but still visible */
-  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
@@ -77,65 +40,88 @@ $primary-color: #d79720;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  color: #111;
   width: 90%;
-  max-width: 680px; /* compact width */
+  max-width: 700px;
   max-height: 85vh;
   overflow: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  padding: 20px;
+  padding: 28px;
   z-index: 1001;
 }
 
 .dialog h3 {
   text-align: center;
   margin-top: 6px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text-primary);
 }
 
 .dialog-animate {
-  animation: popIn 200ms ease-out;
+  animation: popIn 250ms ease-out;
 }
 
 @keyframes popIn {
-  from { transform: translate(-50%, -50%) scale(0.96); opacity: 0; }
-  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  from { transform: translate(-50%, -50%) scale(0.94); opacity: 0; }
+  to   { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
 }
 
-.dialog-image {
+.dialog-image,
+.dialog-video {
   width: 100%;
-  height: auto; /* keep aspect ratio */
-  max-height: 60vh; /* fit within viewport */
-  object-fit: contain; /* avoid cropping */
-  border-radius: 8px;
+  height: auto;
+  max-height: 50vh;
+  object-fit: contain;
+  border-radius: 12px;
   display: block;
-  margin: 12px auto;
-  background: #f3f3f3;
+  margin: 16px auto;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .dialog-description {
-  white-space: pre-line; /* respect newlines from i18n */
+  white-space: pre-line;
   margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.7;
 }
 
-.dialog a {
-  color: #0a66c2;
-  text-decoration: none;
+.dialog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-pink) !important;
   font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-.dialog a:hover {
-  text-decoration: underline;
+.dialog-link:hover {
+  color: var(--accent-purple) !important;
+}
+
+.dialog-link.private {
+  color: var(--text-muted) !important;
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 12px;
+  top: 14px;
+  right: 16px;
   border: none;
-  background: transparent;
-  font-size: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  line-height: 1;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
 }

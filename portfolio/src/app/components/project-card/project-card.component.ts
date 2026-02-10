@@ -16,10 +16,17 @@ export class ProjectCardComponent {
   @Input() projectShortDescription!: string;
   @Input() projectUrl!: string;
   @Input() projectDescription: string = '';
+  @Input() projectVideoUrl: string = '';
 
   @Output() viewProject = new EventEmitter<void>();
 
+  showVideo = false;
+
   openDialog() {
     this.viewProject.emit();
+  }
+
+  toggleVideo() {
+    this.showVideo = !this.showVideo;
   }
 }

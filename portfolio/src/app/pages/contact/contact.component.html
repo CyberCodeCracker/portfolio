@@ -1,0 +1,67 @@
+<section class="contact-section">
+  <h2 class="section-title">
+    <i class="fas fa-envelope"></i> Get In Touch
+  </h2>
+
+  <div class="contact-wrapper">
+    <!-- Left: Social links -->
+    <div class="social-panel glass">
+      <h3>Connect with me</h3>
+      <p>Feel free to reach out through any of these platforms or use the form to send me a message directly.</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/CyberCodeCracker" target="_blank" rel="noopener noreferrer" class="social-link github">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:your.email@gmail.com" class="social-link email">
+          <i class="fas fa-envelope"></i>
+          <span>your.email&#64;gmail.com</span>
+        </a>
+        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener noreferrer" class="social-link twitter">
+          <i class="fab fa-x-twitter"></i>
+          <span>Twitter / X</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Contact form -->
+    <form class="contact-form glass" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <div class="form-group">
+        <label for="contact-name">Name *</label>
+        <input type="text" id="contact-name" name="name" [(ngModel)]="formData.name" required placeholder="Your name" />
+      </div>
+
+      <div class="form-group">
+        <label for="contact-email">Email *</label>
+        <input type="email" id="contact-email" name="email" [(ngModel)]="formData.email" required placeholder="your.email@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="contact-subject">Subject</label>
+        <input type="text" id="contact-subject" name="subject" [(ngModel)]="formData.subject" placeholder="What's this about?" />
+      </div>
+
+      <div class="form-group">
+        <label for="contact-message">Message *</label>
+        <textarea id="contact-message" name="message" [(ngModel)]="formData.message" required rows="5" placeholder="Tell me what you have in mind…"></textarea>
+      </div>
+
+      <button type="submit" class="send-btn" [disabled]="sending || !contactForm.valid">
+        <i class="fas" [class.fa-paper-plane]="!sending" [class.fa-spinner]="sending" [class.fa-spin]="sending"></i>
+        {{ sending ? 'Sending…' : 'Send Message' }}
+      </button>
+
+      <div class="feedback success" *ngIf="sent">
+        <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+      </div>
+      <div class="feedback error" *ngIf="error">
+        <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or email me directly.
+      </div>
+    </form>
+  </div>
+</section>

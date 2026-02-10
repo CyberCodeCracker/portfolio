@@ -1,0 +1,31 @@
+<section class="experience-section">
+  <h2 class="section-title">
+    <i class="fas fa-briefcase"></i> Professional Experience
+  </h2>
+
+  <div class="experience-grid">
+    <div class="experience-card glass" *ngFor="let exp of experiences; let i = index"
+         [style.animation-delay]="i * 0.15 + 's'">
+      <div class="card-header">
+        <div class="icon-wrapper">
+          <i [class]="exp.icon"></i>
+        </div>
+        <div class="header-text">
+          <h3>{{ exp.role }}</h3>
+          <h4>{{ exp.company }}</h4>
+          <span class="meta">
+            <i class="fas fa-map-marker-alt"></i> {{ exp.location }}
+            &nbsp;·&nbsp;
+            <i class="fas fa-calendar-alt"></i> {{ exp.period }}
+          </span>
+        </div>
+      </div>
+
+      <p class="description">{{ exp.description }}</p>
+
+      <div class="tech-tags">
+        <span class="tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+      </div>
+    </div>
+  </div>
+</section>

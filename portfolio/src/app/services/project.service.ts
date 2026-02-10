@@ -5,9 +5,10 @@ import { BehaviorSubject, Observable, Subscription } from "rxjs";
 export interface Project {
   TITLE: string;
   IMAGE_URL: string;
-  SHORT_DESCRIPTION: string
+  SHORT_DESCRIPTION: string;
   DESCRIPTION: string;
   PROJECT_URL: string;
+  VIDEO_URL?: string;  // optional demo video URL
 } 
 
 @Injectable({

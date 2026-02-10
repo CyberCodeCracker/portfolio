@@ -1,11 +1,9 @@
-$primary-color: #d79720;
-
 .custom-container {
-  background-color: $primary-color;
+  background: var(--gradient-hero);
   max-width: 70vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  margin: 20px auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  margin: 30px auto 30px;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
@@ -15,6 +13,8 @@ $primary-color: #d79720;
   column-gap: 24px;
   row-gap: 16px;
   position: relative;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .intro {
@@ -22,6 +22,9 @@ $primary-color: #d79720;
 }
 .photo {
   grid-area: photo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .rest {
   grid-area: rest;
@@ -42,30 +45,67 @@ $primary-color: #d79720;
   display: inline;
 }
 
+/* ===== Profile image with animated gradient ring ===== */
 .img-fluid {
-  padding: 10px;
-  width: 260px;
-  max-width: 30vw;
-  height: auto;
+  width: 220px;
+  max-width: 28vw;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  padding: 5px;
+  background: conic-gradient(
+    from 0deg,
+    #c471ed,
+    #8b5cf6,
+    #7c3aed,
+    #a855f7,
+    #c471ed
+  );
+  border: 4px solid transparent;
+  box-shadow:
+    0 0 20px rgba(139, 92, 246, 0.4),
+    0 0 40px rgba(196, 113, 237, 0.2);
+  animation: borderRotate 4s linear infinite, slideInFromRight 0.8s ease-out forwards;
 }
 
+@keyframes borderRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ===== Typed text styling ===== */
 .typed-out {
   display: block;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.7;
+  color: #1a0a2e;
   white-space: pre-line;
   text-wrap: pretty;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* First intro section — the title line — bolder */
+#intro {
+  margin-left: 10px !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #1a0a2e;
+}
+
+/* Last paragraph — italic emphasis */
+.rest .typed-out {
+  font-style: italic;
+  font-weight: 500;
+  color: #2d1050;
 }
 
 .image-animated {
   animation: slideInFromRight 0.8s ease-out forwards;
-}
-
-#intro {
-  margin-left: 10px !important;
 }
 
 @keyframes slideInFromRight {
@@ -87,10 +127,17 @@ $primary-color: #d79720;
       "intro"
       "rest";
     text-align: center;
+    max-width: 92vw;
+    margin-top: 90px;
   }
 
   .img-fluid {
     width: 180px;
+    height: 180px;
     max-width: 60vw;
+  }
+
+  #intro {
+    font-size: 1.2rem;
   }
 }

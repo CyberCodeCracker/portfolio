@@ -1,0 +1,31 @@
+<section class="education-section">
+  <h2 class="section-title">
+    <i class="fas fa-graduation-cap"></i> Education & Certifications
+  </h2>
+
+  <div class="timeline">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item"
+         *ngFor="let item of timelineItems; let i = index"
+         [class.right]="i % 2 !== 0"
+         [class.left]="i % 2 === 0">
+      
+      <!-- Dot on the line -->
+      <div class="timeline-dot">
+        <i [class]="item.icon"></i>
+      </div>
+
+      <!-- Card -->
+      <div class="timeline-card glass">
+        <span class="badge" [class.cert]="item.type === 'certification'">
+          {{ item.type === 'education' ? '🎓 Education' : '📜 Certification' }}
+        </span>
+        <span class="year">{{ item.year }}</span>
+        <h3>{{ item.title }}</h3>
+        <h4>{{ item.institution }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,16 @@
 <!-- project-card.component.html -->
-<div class="project-container slide-in">
-  <img [src]="projectImageUrl" [alt]="projectTitle" class="project-image" />
+<div class="project-container glass slide-in">
+  <!-- Image / Video toggle area -->
+  <div class="media-wrapper">
+    <img *ngIf="!showVideo" [src]="projectImageUrl" [alt]="projectTitle" class="project-image" />
+    <video *ngIf="showVideo && projectVideoUrl"
+           [src]="projectVideoUrl"
+           controls autoplay
+           class="project-video">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <h3>{{ projectTitle }}</h3>
   <p>{{ projectShortDescription }}</p>
 
@@ -12,12 +22,20 @@
       rel="noopener noreferrer"
       class="project-link"
     >
-      {{ 'VIEW_PROJECT' | translate }}
+      <i class="fas fa-external-link-alt"></i> {{ 'VIEW_PROJECT' | translate }}
     </a>
-    <span *ngIf="projectUrl === 'Project is private' || projectUrl === 'Projet privé'" class="project-link">{{ projectUrl }}</span>
+    <span *ngIf="projectUrl === 'Project is private' || projectUrl === 'Projet privé'" class="project-link private">
+      <i class="fas fa-lock"></i> {{ projectUrl }}
+    </span>
 
-    <button type="button" class="view-btn" (click)="openDialog()">
-      {{ 'VIEW_DETAILS' | translate }}
-    </button>
+    <div class="btn-group">
+      <button *ngIf="projectVideoUrl" type="button" class="video-btn" (click)="toggleVideo()">
+        <i class="fas" [class.fa-play-circle]="!showVideo" [class.fa-image]="showVideo"></i>
+        {{ showVideo ? 'Image' : 'Demo' }}
+      </button>
+      <button type="button" class="view-btn" (click)="openDialog()">
+        <i class="fas fa-expand"></i> {{ 'VIEW_DETAILS' | translate }}
+      </button>
+    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <!-- projects.component.html -->
-<section class="projects">
-  <h2>{{ 'PROJECTS' | translate }}</h2>
+<section class="projects glass">
+  <h2 class="section-title"><i class="fas fa-code"></i> {{ 'PROJECTS' | translate }}</h2>
   <div class="project-list">
     <app-project-card
       *ngFor="let project of projects"
@@ -9,30 +9,45 @@
       [projectShortDescription]="project.SHORT_DESCRIPTION"
       [projectUrl]="project.PROJECT_URL"
       [projectDescription]="project.DESCRIPTION"
+      [projectVideoUrl]="project.VIDEO_URL || ''"
       (viewProject)="openProject(project)"
     ></app-project-card>
   </div>
 
-  <!-- Full-screen modal moved to parent -->
+  <!-- Full-screen modal -->
   <div class="overlay" *ngIf="showDialog" (click)="closeDialog()"></div>
   <div
-    class="dialog dialog-animate"
+    class="dialog glass dialog-animate"
     *ngIf="showDialog && selectedProject"
     role="dialog"
     aria-modal="true"
     aria-labelledby="dialog-title"
     (click)="$event.stopPropagation()"
   >
-    <button type="button" class="close" aria-label="Close" (click)="closeDialog()">×</button>
+    <button type="button" class="close" aria-label="Close" (click)="closeDialog()">
+      <i class="fas fa-times"></i>
+    </button>
     <h3 id="dialog-title">{{ selectedProject!.TITLE }}</h3>
-    <img [src]="selectedProject!.IMAGE_URL" [alt]="selectedProject!.TITLE" class="dialog-image" />
+
+    <!-- Video in dialog if available -->
+    <video *ngIf="selectedProject!.VIDEO_URL"
+           [src]="selectedProject!.VIDEO_URL"
+           controls
+           class="dialog-video">
+    </video>
+
+    <img *ngIf="!selectedProject!.VIDEO_URL"
+         [src]="selectedProject!.IMAGE_URL"
+         [alt]="selectedProject!.TITLE"
+         class="dialog-image" />
+
     <p class="dialog-description">{{ selectedProject!.DESCRIPTION }}</p>
     <a *ngIf="selectedProject!.PROJECT_URL !== 'Project is private' && selectedProject!.PROJECT_URL !== 'Projet privé'"
-       [href]="selectedProject!.PROJECT_URL" target="_blank" rel="noopener noreferrer">
-      {{ 'VIEW_PROJECT' | translate }}
+       [href]="selectedProject!.PROJECT_URL" target="_blank" rel="noopener noreferrer" class="dialog-link">
+      <i class="fas fa-external-link-alt"></i> {{ 'VIEW_PROJECT' | translate }}
     </a>
-    <span *ngIf="selectedProject!.PROJECT_URL === 'Project is private' || selectedProject!.PROJECT_URL === 'Projet privé'">
-      {{ selectedProject!.PROJECT_URL }}
+    <span *ngIf="selectedProject!.PROJECT_URL === 'Project is private' || selectedProject!.PROJECT_URL === 'Projet privé'" class="dialog-link private">
+      <i class="fas fa-lock"></i> {{ selectedProject!.PROJECT_URL }}
     </span>
   </div>
 </section>
