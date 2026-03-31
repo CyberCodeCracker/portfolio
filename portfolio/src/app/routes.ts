@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { QuizComponent } from './pages/quiz/quiz.component';
 import { EducationComponent } from './pages/education/education.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -36,11 +35,6 @@ const routeConfig: Routes = [
         path: 'contact',
         component: ContactComponent,
         title: 'Contact — Souhail Amouri',
-      },
-      {
-        path: 'quiz',
-        component: QuizComponent,
-        title: 'Quiz — Souhail Amouri',
       },
       {
         path: '',

@@ -1,16 +1,17 @@
 <section class="education-section">
   <h2 class="section-title">
-    <i class="fas fa-graduation-cap"></i> Education & Certifications
+    <i class="fas fa-graduation-cap"></i> {{ 'EDUCATION_PAGE.TITLE' | translate }}
   </h2>
 
   <div class="timeline">
     <div class="timeline-line"></div>
 
-    <div class="timeline-item"
-         *ngFor="let item of timelineItems; let i = index"
-         [class.right]="i % 2 !== 0"
-         [class.left]="i % 2 === 0">
-      
+    <div
+      class="timeline-item"
+      *ngFor="let item of timelineItems; let i = index"
+      [class.right]="i % 2 !== 0"
+      [class.left]="i % 2 === 0"
+    >
       <!-- Dot on the line -->
       <div class="timeline-dot">
         <i [class]="item.icon"></i>
@@ -19,12 +20,23 @@
       <!-- Card -->
       <div class="timeline-card glass">
         <span class="badge" [class.cert]="item.type === 'certification'">
-          {{ item.type === 'education' ? '🎓 Education' : '📜 Certification' }}
+          {{ item.type === 'education' ? ('EDUCATION_PAGE.BADGE_EDUCATION' | translate) : ('EDUCATION_PAGE.BADGE_CERTIFICATION' | translate) }}
         </span>
         <span class="year">{{ item.year }}</span>
         <h3>{{ item.title }}</h3>
         <h4>{{ item.institution }}</h4>
         <p>{{ item.description }}</p>
+        @if (item.type === "certification") {
+          <a
+            [href]="item.credentialUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credential-link"
+          >
+            {{ 'EDUCATION_PAGE.CREDENTIAL' | translate }}:
+            {{ item.credentialUrl!.split("/").pop() }}
+          </a>
+        }
       </div>
     </div>
   </div>

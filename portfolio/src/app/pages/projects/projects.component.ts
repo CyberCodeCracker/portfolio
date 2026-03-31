@@ -30,7 +30,6 @@ export class ProjectsComponent implements OnDestroy {
   openProject(project: Project) {
     this.selectedProject = project;
     this.showDialog = true;
-    // optional: prevent body scroll
     document.body.style.overflow = 'hidden';
   }
 

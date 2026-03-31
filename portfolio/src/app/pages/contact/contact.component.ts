@@ -23,16 +23,9 @@ export class ContactComponent {
   sent = false;
   error = false;
 
-  // ========================================================
-  //  Replace the three IDs below with your real EmailJS IDs
-  //  1. Sign up at https://www.emailjs.com (free tier = 200 emails/month)
-  //  2. Create a Service  → linked to your Gmail
-  //  3. Create a Template → using {{from_name}}, {{from_email}}, {{subject}}, {{message}}
-  //  4. Copy your Public Key from Account → General
-  // ========================================================
-  private SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
-  private TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
-  private PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';    // e.g. 'aB1cD2eF3gH4iJ5k'
+  private SERVICE_ID  = 'service_9vluh63'; 
+  private TEMPLATE_ID = 'template_vjda7bn';  
+  private PUBLIC_KEY  = 'XQlnvO7bpi1LnDc5j';    
 
   async onSubmit() {
     if (!this.formData.name || !this.formData.email || !this.formData.message) return;

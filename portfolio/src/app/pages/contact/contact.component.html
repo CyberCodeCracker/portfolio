@@ -1,16 +1,16 @@
 <section class="contact-section">
   <h2 class="section-title">
-    <i class="fas fa-envelope"></i> Get In Touch
+    <i class="fas fa-envelope"></i> {{ 'CONTACT_PAGE.TITLE' | translate }}
   </h2>
 
   <div class="contact-wrapper">
     <!-- Left: Social links -->
     <div class="social-panel glass">
-      <h3>Connect with me</h3>
-      <p>Feel free to reach out through any of these platforms or use the form to send me a message directly.</p>
+      <h3>{{ 'CONTACT_PAGE.CONNECT_TITLE' | translate }}</h3>
+      <p>{{ 'CONTACT_PAGE.CONNECT_DESC' | translate }}</p>
 
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+        <a href="https://www.linkedin.com/in/souhail-amouri-293294352/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
           <i class="fab fa-linkedin-in"></i>
           <span>LinkedIn</span>
         </a>
@@ -18,13 +18,9 @@
           <i class="fab fa-github"></i>
           <span>GitHub</span>
         </a>
-        <a href="mailto:your.email@gmail.com" class="social-link email">
+        <a href="mailto:souhailamouri123@gmail.com" class="social-link email">
           <i class="fas fa-envelope"></i>
-          <span>your.email&#64;gmail.com</span>
-        </a>
-        <a href="https://twitter.com/YOUR_TWITTER" target="_blank" rel="noopener noreferrer" class="social-link twitter">
-          <i class="fab fa-x-twitter"></i>
-          <span>Twitter / X</span>
+          <span>souhailamouri123&#64;gmail.com</span>
         </a>
       </div>
     </div>
@@ -32,35 +28,35 @@
     <!-- Right: Contact form -->
     <form class="contact-form glass" (ngSubmit)="onSubmit()" #contactForm="ngForm">
       <div class="form-group">
-        <label for="contact-name">Name *</label>
-        <input type="text" id="contact-name" name="name" [(ngModel)]="formData.name" required placeholder="Your name" />
+        <label for="contact-name">{{ 'CONTACT_PAGE.LABEL_NAME' | translate }}</label>
+        <input type="text" id="contact-name" name="name" [(ngModel)]="formData.name" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_NAME' | translate" />
       </div>
 
       <div class="form-group">
-        <label for="contact-email">Email *</label>
-        <input type="email" id="contact-email" name="email" [(ngModel)]="formData.email" required placeholder="your.email@example.com" />
+        <label for="contact-email">{{ 'CONTACT_PAGE.LABEL_EMAIL' | translate }}</label>
+        <input type="email" id="contact-email" name="email" [(ngModel)]="formData.email" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_EMAIL' | translate" />
       </div>
 
       <div class="form-group">
-        <label for="contact-subject">Subject</label>
-        <input type="text" id="contact-subject" name="subject" [(ngModel)]="formData.subject" placeholder="What's this about?" />
+        <label for="contact-subject">{{ 'CONTACT_PAGE.LABEL_SUBJECT' | translate }}</label>
+        <input type="text" id="contact-subject" name="subject" [(ngModel)]="formData.subject" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_SUBJECT' | translate" />
       </div>
 
       <div class="form-group">
-        <label for="contact-message">Message *</label>
-        <textarea id="contact-message" name="message" [(ngModel)]="formData.message" required rows="5" placeholder="Tell me what you have in mind…"></textarea>
+        <label for="contact-message">{{ 'CONTACT_PAGE.LABEL_MESSAGE' | translate }}</label>
+        <textarea id="contact-message" name="message" [(ngModel)]="formData.message" required rows="5" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_MESSAGE' | translate"></textarea>
       </div>
 
       <button type="submit" class="send-btn" [disabled]="sending || !contactForm.valid">
         <i class="fas" [class.fa-paper-plane]="!sending" [class.fa-spinner]="sending" [class.fa-spin]="sending"></i>
-        {{ sending ? 'Sending…' : 'Send Message' }}
+        {{ sending ? ('CONTACT_PAGE.SENDING' | translate) : ('CONTACT_PAGE.SEND' | translate) }}
       </button>
 
       <div class="feedback success" *ngIf="sent">
-        <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+        <i class="fas fa-check-circle"></i> {{ 'CONTACT_PAGE.SUCCESS' | translate }}
       </div>
       <div class="feedback error" *ngIf="error">
-        <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or email me directly.
+        <i class="fas fa-exclamation-circle"></i> {{ 'CONTACT_PAGE.ERROR' | translate }}
       </div>
     </form>
   </div>

@@ -1,143 +1,153 @@
+/* ══════════════════════════════════════════════════
+   Hero card — magazine/book float layout
+   Image floats LEFT, text wraps around it,
+   continues below once image ends
+   ══════════════════════════════════════════════════ */
 .custom-container {
   background: var(--gradient-hero);
   max-width: 70vw;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  border-radius: 18px;
+  border-radius: 22px;
   margin: 30px auto 30px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "intro photo"
-    "rest  rest";
-  column-gap: 24px;
-  row-gap: 16px;
-  position: relative;
-  padding: 2rem;
+  padding: 2rem 2.25rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  /* overflow hidden so rounded corners clip the floated image too */
+  overflow: hidden;
+  display: block;
+  text-align: left; /* Force left alignment of block text */
 }
 
-.intro {
-  grid-area: intro;
-}
+/* ─── Floated rectangular photo ──────────────────── */
 .photo {
-  grid-area: photo;
+  float: left;
+  margin: 0 1.75rem 0.5rem 0; /* gap between photo and text */
+  line-height: 0;               /* kill inline spacing */
+  display: inline-block;
+}
+
+.photo-author-name {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.rest {
-  grid-area: rest;
+  justify-content: space-around;
+  margin: 1rem 0;
 }
 
-/* Make the small programming icon in the intro tiny */
-.intro > img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  display: inline-block;
-  vertical-align: baseline;
-  margin-right: 8px;
-}
-
-/* Keep the first intro line on the same line as the icon */
-.intro .typed-out {
-  display: inline;
-}
-
-/* ===== Profile image with animated gradient ring ===== */
 .img-fluid {
-  width: 220px;
-  max-width: 28vw;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  padding: 5px;
-  background: conic-gradient(
-    from 0deg,
-    #c471ed,
-    #8b5cf6,
-    #7c3aed,
-    #a855f7,
-    #c471ed
-  );
-  border: 4px solid transparent;
-  box-shadow:
-    0 0 20px rgba(139, 92, 246, 0.4),
-    0 0 40px rgba(196, 113, 237, 0.2);
-  animation: borderRotate 4s linear infinite, slideInFromRight 0.8s ease-out forwards;
-}
-
-@keyframes borderRotate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-
-/* ===== Typed text styling ===== */
-.typed-out {
   display: block;
-  line-height: 1.7;
+  width: 210px;
+  height: 270px;               /* portrait rectangle, book-style */
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.6),
+    0 8px 28px rgba(0, 0, 0, 0.45);
+  animation: slideInFromLeft 0.7s ease-out forwards;
+}
+
+/* ─── Author Name ──────────────────────────────── */
+.author-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: -0.25rem;
+  margin-bottom: 0.75rem;
+  color: #1a0a2e;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+/* ─── Clearfix ─────────────────────────────────── */
+.clearfix {
+  clear: both;
+}
+
+/* ─── Typed text ─────────────────────────────── */
+.intro, .rest {
+  display: inline; /* inline layout lets text physically wrap the image */
+}
+
+.typed-out {
+  line-height: 1.75;
   color: #1a0a2e;
   white-space: pre-line;
   text-wrap: pretty;
   font-size: 1rem;
   font-weight: 400;
+  display: inline; /* changing from block to inline ensuring it wraps */
 }
 
-/* First intro section — the title line — bolder */
 #intro {
-  margin-left: 10px !important;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.3px;
   color: #1a0a2e;
+  margin-bottom: 0.75rem;
+  display: block; /* `#intro` is the bold intro paragraph, block wrap */
 }
 
-/* Last paragraph — italic emphasis */
 .rest .typed-out {
   font-style: italic;
   font-weight: 500;
   color: #2d1050;
+  margin-top: 1rem;
+  display: block;
 }
 
 .image-animated {
-  animation: slideInFromRight 0.8s ease-out forwards;
+  animation: slideInFromLeft 0.7s ease-out forwards;
 }
 
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+@keyframes slideInFromLeft {
+  from { transform: translateX(-40px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
 }
 
-@media (max-width: 768px) {
+/* ══════════════════════════════════════════════════
+   Tablet / split-screen (≤ 1100px)
+   Slightly smaller image
+   ══════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
   .custom-container {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "photo"
-      "intro"
-      "rest";
-    text-align: center;
-    max-width: 92vw;
-    margin-top: 90px;
+    max-width: 84vw;
   }
 
   .img-fluid {
-    width: 180px;
+    width: 170px;
+    height: 220px;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   Mobile (≤ 680px)
+   Float is removed — image sits centered above text
+   ══════════════════════════════════════════════════ */
+@media (max-width: 680px) {
+  .custom-container {
+    max-width: 92vw;
+    margin-top: 90px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+  }
+
+  .photo {
+    float: none;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-fluid {
+    width: 140px;
     height: 180px;
-    max-width: 60vw;
+    margin: 0 auto;
   }
 
   #intro {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .author-name {
+    margin-top: 0;
+    text-align: center;
   }
 }

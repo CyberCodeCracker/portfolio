@@ -4,67 +4,147 @@
   "CONTACT": "Contact",
   "EDUCATION": "Éducation",
   "EXPERIENCE": "Expérience",
-  "WELCOME_MESSAGE": "Bienvenue dans mon portfolio !",
-  "DESCRIPTION": "Ceci est une description d'exemple en français.",
+  "WELCOME_MESSAGE": "Bienvenue sur mon portfolio !",
+  "DESCRIPTION": "Ceci est une description d'exemple en anglais.",
   "SKILLS": "Compétences",
   "CONTACT_ME": "Me contacter",
   "QUIZ_TITLE": "Quiz",
-  "LANGUAGE": "Langue",
+  "LANGUAGE": "FR",
   "VIEW_PROJECT": "Voir le projet",
   "VIEW_DETAILS": "Voir les détails",
   "WATCH_DEMO": "Voir la démo",
-  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | .NET | Passionné de DevOps\n\nJe construis des applications web évolutives, propres et efficaces, reliant les expériences front-end et la logique back-end. Ma stack tourne autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me motivent.\n\nMais il ne s'agit pas seulement de coder. Quand je ne développe pas de logiciels, vous me trouverez probablement à la salle de sport, soulevant des poids, poursuivant la même discipline et progression que j'apporte au développement.\n\nPour moi, tout est une question de croissance continue — en technologie, en force et dans la vie.",
+  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | .NET | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
   "PROJECTS_LIST": [
     {
       "TITLE": "Showroom",
-      "SHORT_DESCRIPTION": "Gérez les stocks, les clients, les comptes utilisateurs et l'historique des ventes — construit avec Angular et .NET.",
-      "DESCRIPTION": "Dans le cadre de mon stage d'été, j'ai développé une application web de gestion conçue pour gérer les stocks, les dossiers clients, l'administration des utilisateurs et l'historique des ventes dans un système centralisé.\n\nLa plateforme garantit un suivi précis des stocks, une gestion fiable des clients et un accès basé sur les rôles pour différents types d'utilisateurs web.\n\nConstruite avec Angular pour une expérience front-end interactive et conviviale et .NET pour des API sécurisées et une logique métier robuste, l'application rationalise les opérations quotidiennes, améliore la cohérence des données et fournit des informations claires grâce au suivi et aux rapports sur l'historique des ventes.",
+      "SHORT_DESCRIPTION": "Gérer les stocks, les clients, les comptes utilisateurs et l'historique des ventes — développé avec Angular & .NET.",
+      "DESCRIPTION": "Dans le cadre de mon stage d'été, j'ai développé une application web de gestion conçue pour centraliser la gestion des stocks, des clients, des utilisateurs et de l’historique des ventes.\n\nLa plateforme garantit un suivi précis des stocks, une gestion fiable des clients et un accès basé sur les rôles pour différents types d’utilisateurs.\n\nDéveloppée avec Angular pour le frontend afin d’offrir une expérience interactive et conviviale, et .NET pour le backend afin d’assurer des API sécurisées et une logique métier solide, l’application simplifie les opérations quotidiennes, améliore la cohérence des données et fournit des analyses claires grâce au suivi et aux rapports des ventes.",
       "IMAGE_URL": "assets/imgs/showroom.jpg",
-      "PROJECT_URL": "Projet privé",
+      "PROJECT_URL": "Le projet est privé",
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Réseau social pour livres",
-      "SHORT_DESCRIPTION": "Une plateforme sociale pour les amateurs de livres pour partager leurs collections, construite avec Angular et Spring Boot.",
-      "DESCRIPTION": "Réseau social pour livres est une application full-stack qui permet aux utilisateurs de gérer leurs collections de livres et d'interagir avec une communauté d'amateurs de livres.\n\nElle offre des fonctionnalités telles que l'inscription des utilisateurs, la validation sécurisée par e-mail, la gestion des livres (y compris la création, la mise à jour, le partage et l'archivage), l'emprunt de livres avec vérification de la disponibilité, la restitution des livres et l'approbation des retours.\n\nL'application garantit la sécurité à l'aide de jetons JWT et respecte les meilleures pratiques de conception d'API REST. Le backend est construit avec Spring Boot 3 et Spring Security 6, tandis que le frontend est développé avec Angular et Bootstrap pour le style.",
+      "TITLE": "Réseau Social de Livres",
+      "SHORT_DESCRIPTION": "Une plateforme sociale pour les amateurs de livres afin de partager leurs ouvrages, développée avec Angular & Spring Boot.",
+      "DESCRIPTION": "Book Social Network est une application full-stack qui permet aux utilisateurs de gérer leurs collections de livres et d’interagir avec une communauté de passionnés.\n\nElle propose des fonctionnalités telles que l’inscription des utilisateurs, la validation sécurisée par e-mail, la gestion des livres (création, mise à jour, partage et archivage), l’emprunt de livres avec vérification de disponibilité, le retour des livres et l’approbation des retours.\n\nL’application garantit la sécurité grâce aux tokens JWT et respecte les bonnes pratiques de conception des API REST. Le backend est développé avec Spring Boot 3 et Spring Security 6, tandis que le frontend est réalisé avec Angular et Bootstrap pour le style.",
       "IMAGE_URL": "assets/imgs/bsn.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/Book-Network",
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Calculateur d'investissement",
-      "SHORT_DESCRIPTION": "Une application web pour calculer la croissance des investissements au fil du temps, construite avec Angular.",
-      "DESCRIPTION": "Le Calculateur d'investissement est une application web conçue pour aider les utilisateurs à estimer la valeur future de leurs investissements en fonction de divers paramètres.\n\nLes utilisateurs peuvent saisir des détails tels que le montant initial de l'investissement, les contributions mensuelles, le taux de rendement annuel attendu et la durée de l'investissement.\n\nL'application calcule et affiche ensuite la croissance projetée de l'investissement au fil du temps, offrant des informations sur la manière dont différents facteurs peuvent impacter le montant final.\n\nCet outil est particulièrement utile pour les personnes planifiant leur avenir financier et cherchant à comprendre les résultats potentiels de leurs stratégies d'investissement.\n\nConstruite avec Angular, l'application propose une interface conviviale facilitant la saisie des données et la visualisation des résultats.",
+      "TITLE": "Calculateur d’Investissement",
+      "SHORT_DESCRIPTION": "Une application web pour calculer la croissance des investissements dans le temps, développée avec Angular.",
+      "DESCRIPTION": "Le calculateur d’investissement est une application web conçue pour aider les utilisateurs à estimer la valeur future de leurs investissements selon différents paramètres.\n\nLes utilisateurs peuvent saisir des informations telles que le montant initial, les contributions mensuelles, le taux de rendement annuel attendu et la durée d’investissement.\n\nL’application calcule ensuite la croissance projetée et affiche les résultats, offrant des insights sur l’impact des différents facteurs.\n\nCet outil est particulièrement utile pour les personnes planifiant leur avenir financier.\n\nDéveloppée avec Angular, l’application propose une interface conviviale facilitant la saisie des données et la visualisation des résultats.",
       "IMAGE_URL": "assets/imgs/investment.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/Investment-Calculator",
       "VIDEO_URL": ""
     },
     {
       "TITLE": "Get Fit",
-      "SHORT_DESCRIPTION": "Une application de suivi de fitness pour enregistrer les entraînements, construite avec Angular.",
-      "DESCRIPTION": "Get Fit est une application web conçue pour aider les utilisateurs à suivre et gérer efficacement leurs routines de fitness.\n\nL'application permet aux utilisateurs de créer et d'enregistrer divers types d'entraînements, y compris l'entraînement de force, le cardio et les exercices de flexibilité.\n\nAvec une interface intuitive construite avec Angular, Get Fit offre une expérience fluide pour que les utilisateurs restent motivés et engagés dans leur parcours de fitness.",
+      "SHORT_DESCRIPTION": "Une application de suivi fitness pour enregistrer les entraînements, développée avec Angular.",
+      "DESCRIPTION": "Get Fit est une application web conçue pour aider les utilisateurs à suivre et gérer efficacement leurs routines sportives.\n\nElle permet de créer et enregistrer différents types d’entraînements, notamment musculation, cardio et exercices de flexibilité.\n\nAvec une interface intuitive développée avec Angular, Get Fit offre une expérience fluide pour rester motivé et engagé.",
       "IMAGE_URL": "assets/imgs/fit.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/GetFit",
       "VIDEO_URL": ""
     },
     {
       "TITLE": "TO-DO",
-      "SHORT_DESCRIPTION": "Une application simple de gestion des tâches pour organiser vos to-dos, construite avec Angular.",
-      "DESCRIPTION": "TO-DO est une application web simple conçue pour aider les utilisateurs à gérer leurs tâches quotidiennes efficacement.\n\nL'application permet aux utilisateurs de créer, modifier et supprimer des tâches, offrant une interface simple pour suivre ce qui doit être fait.\n\nConstruite avec Angular, TO-DO propose une expérience propre et conviviale, facilitant l'organisation des tâches et la productivité tout au long de la journée.",
+      "SHORT_DESCRIPTION": "Une application simple de gestion des tâches pour organiser vos activités, développée avec Angular.",
+      "DESCRIPTION": "TO-DO est une application web simple conçue pour aider les utilisateurs à gérer efficacement leurs tâches quotidiennes.\n\nElle permet de créer, modifier et supprimer des tâches via une interface simple.\n\nDéveloppée avec Angular, TO-DO offre une expérience claire et conviviale pour rester organisé et productif.",
       "IMAGE_URL": "assets/imgs/to-do.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do",
       "VIDEO_URL": ""
     },
     {
       "TITLE": "FitGear",
-      "SHORT_DESCRIPTION": "Une plateforme interactive où les coachs peuvent utiliser le pouvoir du coaching en ligne pour accompagner leurs clients, construite avec Angular et Spring Boot.",
-      "DESCRIPTION": "FitGear est une application web complète conçue pour faciliter le coaching en ligne et la gestion de fitness.\n\nLa plateforme permet aux coachs de créer et gérer des programmes d'entraînement et des plans alimentaires, de suivre les progrès des clients et de communiquer efficacement avec eux.\n\nLes clients peuvent enregistrer leurs entraînements, suivre leurs progrès et recevoir un coaching personnalisé de leurs entraîneurs.\n\nConstruite avec Angular pour le frontend et Spring Boot pour le backend, FitGear offre une expérience fluide et interactive pour les coachs et les clients, facilitant l'atteinte des objectifs de fitness grâce à un accompagnement structuré.",
+      "SHORT_DESCRIPTION": "Une plateforme interactive où les coachs peuvent accompagner leurs clients en ligne, développée avec Angular & Spring Boot.",
+      "DESCRIPTION": "FitGear est une application web complète conçue pour faciliter le coaching en ligne et la gestion fitness.\n\nElle permet aux coachs de créer et gérer des programmes d’entraînement et des plans alimentaires, de suivre les progrès des clients et de communiquer efficacement.\n\nLes clients peuvent enregistrer leurs séances, suivre leur progression et recevoir un accompagnement personnalisé.\n\nDéveloppée avec Angular pour le frontend et Spring Boot pour le backend, FitGear offre une expérience fluide et interactive.",
       "IMAGE_URL": "assets/imgs/progress.webp",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
       "VIDEO_URL": ""
     }
   ],
-
+  "EDUCATION_PAGE": {
+    "TITLE": "Éducation & Certifications",
+    "BADGE_EDUCATION": "🎓 Éducation",
+    "BADGE_CERTIFICATION": "📜 Certification",
+    "CREDENTIAL": "Justificatif",
+    "ITEMS": [
+      {
+        "year": "2024 – 2027",
+        "title": "Diplôme d'ingénieur en informatique",
+        "institution": "IIT — Institut International de Technologie",
+        "description": "Spécialisation en génie logiciel, intelligence artificielle, systèmes distribués et cloud computing. Focus sur Angular, Spring Boot, .NET.",
+        "type": "education",
+        "icon": "fas fa-university"
+      },
+      {
+        "year": "2021 – 2024",
+        "title": "Licence en Technologies de l'Information et de la Communication",
+        "institution": "ENET'COM — École Nationale d'Électronique et de Télécommunications",
+        "description": "Bases en algorithmes, structures de données, programmation orientée objet, bases de données et réseaux.",
+        "type": "education",
+        "icon": "fas fa-graduation-cap"
+      },
+      {
+        "year": "2023",
+        "title": "Certificat professionnel en cybersécurité Google",
+        "institution": "Google",
+        "description": "Compréhension validée des concepts, outils et bonnes pratiques de cybersécurité.",
+        "type": "certification",
+        "icon": "fab fa-google",
+        "credentialUrl": "https://coursera.org/share/8a1de5b011c508472639de3224dd158b"
+      },
+      {
+        "year": "2021",
+        "title": "Baccalauréat en Mathématiques",
+        "institution": "Lycée — Tunisie",
+        "description": "Diplômé avec mention, démontrant de solides capacités analytiques et de résolution de problèmes.",
+        "type": "education",
+        "icon": "fas fa-school"
+      }
+    ]
+  },
+  "EXPERIENCE_PAGE": {
+    "TITLE": "Expérience Professionnelle",
+    "ITEMS": [
+      {
+        "period": "Juin 2025 – Août 2025",
+        "role": "Développeur Full Stack Stagiaire",
+        "company": "Avantages Soft",
+        "location": "Sfax, Tunisie",
+        "description": "Développement d'une application web de gestion (Showroom) pour la gestion des stocks, des dossiers clients, de l'administration des utilisateurs et de l'historique des ventes. Construit avec Angular côté frontend et .NET côté backend avec SQL Server. Mise en œuvre de l'authentification basée sur JWT et du contrôle d'accès basé sur les rôles.",
+        "technologies": ["Angular", ".NET", "SQL Server", "JWT", "REST API", "Bootstrap"],
+        "icon": "fas fa-laptop-code"
+      },
+      {
+        "period": "Fév 2024 – Juin 2024",
+        "role": "Développeur Logiciel Stagiaire",
+        "company": "Djagora Foundation",
+        "location": "Sfax, Tunisie",
+        "description": "Développement d'un système intelligent de détection de la fatigue des conducteurs, incluant la conception du système, l'implémentation du modèle d'apprentissage profond, la réalisation du système embarqué et le développement de l'application mobile.",
+        "technologies": ["Dlib", "Mediapipe", "React Native", "Websocket", "Firebase", "Numpy", "Python"],
+        "icon": "fas fa-robot"
+      }
+    ]
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Me Contacter",
+    "CONNECT_TITLE": "Me rejoindre sur",
+    "CONNECT_DESC": "N'hésitez pas à me contacter via l'une de ces plateformes ou utilisez le formulaire pour m'envoyer un message directement.",
+    "LABEL_NAME": "Nom *",
+    "LABEL_EMAIL": "Email *",
+    "LABEL_SUBJECT": "Sujet",
+    "LABEL_MESSAGE": "Message *",
+    "PLACEHOLDER_NAME": "Votre nom",
+    "PLACEHOLDER_EMAIL": "votre.email@exemple.com",
+    "PLACEHOLDER_SUBJECT": "De quoi s'agit-il ?",
+    "PLACEHOLDER_MESSAGE": "Dites-moi ce que vous avez à l'esprit…",
+    "SEND": "Envoyer le message",
+    "SENDING": "Envoi en cours…",
+    "SUCCESS": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+    "ERROR": "Oups ! Quelque chose s'est mal passé. Veuillez réessayer ou m'envoyer un e-mail directement."
+  },
   "QUIZ": {
     "TITLE": "Quiz de culture générale",
     "SUBMIT": "Soumettre",
@@ -83,13 +163,13 @@
           "D) Salvador"
         ],
         "correct_answer": "C",
-        "explanation": "Brasília est la capitale du Brésil, conçue par Oscar Niemeyer et établie en 1960 pour déplacer la capitale à l'intérieur des terres depuis Rio de Janeiro."
+        "explanation": "Brasília est la capitale du Brésil, conçue par Oscar Niemeyer et inaugurée en 1960."
       },
       {
-        "question": "Quelle planète est connue sous le nom de Planète Rouge en raison de son apparence rougeâtre ?",
+        "question": "Quelle planète est connue comme la planète rouge ?",
         "options": ["A) Jupiter", "B) Mars", "C) Vénus", "D) Mercure"],
         "correct_answer": "B",
-        "explanation": "Mars est appelée la Planète Rouge en raison de sa surface rougeâtre, causée par l'oxyde de fer (rouille) sur son terrain."
+        "explanation": "Mars est appelée la planète rouge en raison de sa surface riche en oxyde de fer."
       },
       {
         "question": "Qui a peint la Joconde ?",
@@ -100,51 +180,51 @@
           "D) Claude Monet"
         ],
         "correct_answer": "C",
-        "explanation": "Léonard de Vinci a peint la Joconde vers 1503-1506, célèbre pour son fond détaillé et son sourire énigmatique."
+        "explanation": "Léonard de Vinci a peint la Joconde vers 1503–1506."
       },
       {
         "question": "Quel est le symbole chimique de l'or ?",
         "options": ["A) Ag", "B) Au", "C) Fe", "D) Cu"],
         "correct_answer": "B",
-        "explanation": "Au est le symbole chimique de l'or, dérivé du mot latin 'aurum', signifiant aube brillante."
+        "explanation": "Au vient du latin 'aurum'."
       },
       {
-        "question": "Quel pays a accueilli les Jeux olympiques d'été de 2016 ?",
+        "question": "Quel pays a accueilli les Jeux olympiques d'été 2016 ?",
         "options": ["A) Chine", "B) Brésil", "C) Japon", "D) Royaume-Uni"],
         "correct_answer": "B",
-        "explanation": "Le Brésil a accueilli les Jeux olympiques d'été de 2016 à Rio de Janeiro, marquant la première fois que l'Amérique du Sud accueillait l'événement."
+        "explanation": "Le Brésil a accueilli les Jeux à Rio de Janeiro."
       },
       {
-        "question": "Quel est le plus grand mammifère du monde ?",
+        "question": "Quel est le plus grand mammifère au monde ?",
         "options": [
           "A) Baleine bleue",
-          "B) Éléphant d'Afrique",
+          "B) Éléphant africain",
           "C) Girafe",
-          "D) Grand requin blanc"
+          "D) Requin blanc"
         ],
         "correct_answer": "A",
-        "explanation": "La baleine bleue (Balaenoptera musculus) est le plus grand mammifère, atteignant jusqu'à 30 mètres de long et pesant jusqu'à 200 tonnes."
+        "explanation": "La baleine bleue est le plus grand mammifère."
       },
       {
         "question": "En quelle année le Titanic a-t-il coulé ?",
         "options": ["A) 1905", "B) 1912", "C) 1920", "D) 1898"],
         "correct_answer": "B",
-        "explanation": "Le Titanic a coulé le 15 avril 1912 après avoir heurté un iceberg lors de son voyage inaugural, entraînant plus de 1 500 morts."
+        "explanation": "Le Titanic a coulé en 1912."
       },
       {
         "question": "Quel langage de programmation a été créé en premier ?",
         "options": ["A) Python", "B) Java", "C) C++", "D) Fortran"],
         "correct_answer": "D",
-        "explanation": "Fortran, développé dans les années 1950 par IBM, est l'un des premiers langages de programmation, précédant C++ (années 1980), Java (1995) et Python (1990)."
+        "explanation": "Fortran a été développé dans les années 1950."
       },
       {
         "question": "Quel est le plus long fleuve du monde ?",
         "options": ["A) Amazone", "B) Nil", "C) Yangtsé", "D) Mississippi"],
         "correct_answer": "B",
-        "explanation": "Le Nil, long d'environ 6 650 km, est considéré comme le plus long fleuve, traversant l'Afrique du Nord-Est."
+        "explanation": "Le Nil est considéré comme le plus long fleuve."
       },
       {
-        "question": "Qui a écrit la pièce 'Roméo et Juliette' ?",
+        "question": "Qui a écrit 'Roméo et Juliette' ?",
         "options": [
           "A) William Shakespeare",
           "B) Charles Dickens",
@@ -152,7 +232,7 @@
           "D) Mark Twain"
         ],
         "correct_answer": "A",
-        "explanation": "William Shakespeare a écrit 'Roméo et Juliette' vers 1597, une tragédie célèbre sur deux jeunes amoureux issus de familles rivales."
+        "explanation": "William Shakespeare a écrit cette pièce vers 1597."
       }
     ]
   }

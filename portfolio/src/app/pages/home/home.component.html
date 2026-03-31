@@ -1,11 +1,16 @@
 <article class="custom-container">
+  <section class="photo-author-name">
+    <img src="assets/imgs/moi.jpg" class="img-fluid image-animated" alt="Profile photo" />
+    <h3 class="author-name">Souhail Amouri</h3>
+  </section>
+
   <section class="intro">
     <span #typedIntro class="typed-out font-monospace" id="intro"></span>
   </section>
-  <aside class="photo">
-    <img src="assets/imgs/moi.jpg" class="img-fluid image-animated" alt="Profile photo" />
-  </aside>
   <section class="rest">
     <span #typedRest class="typed-out font-monospace"></span>
   </section>
+
+  <!-- clear the float so the card stretches to contain the image -->
+  <div class="clearfix"></div>
 </article>

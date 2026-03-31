@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 interface TimelineItem {
   year: string;
@@ -9,6 +10,7 @@ interface TimelineItem {
   description: string;
   type: 'education' | 'certification';
   icon: string;
+  credentialUrl?: string;
 }
 
 @Component({
@@ -18,55 +20,28 @@ interface TimelineItem {
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent {
-  timelineItems: TimelineItem[] = [
-    {
-      year: '2023 – 2025',
-      title: 'Engineering Degree in Computer Science',
-      institution: 'ENET\'COM — National School of Electronics and Telecommunications',
-      description: 'Specialization in software engineering, web applications, distributed systems, and cloud computing. Focus on Angular, Spring Boot, .NET, and DevOps practices.',
-      type: 'education',
-      icon: 'fas fa-university'
-    },
-    {
-      year: '2020 – 2023',
-      title: 'Bachelor\'s Degree in Computer Science',
-      institution: 'Faculty of Sciences — University of Sfax',
-      description: 'Foundation in algorithms, data structures, object-oriented programming, databases, and networking. Projects in Java, Python, and C.',
-      type: 'education',
-      icon: 'fas fa-graduation-cap'
-    },
-    {
-      year: '2024',
-      title: 'AWS Certified Cloud Practitioner',
-      institution: 'Amazon Web Services (AWS)',
-      description: 'Validated understanding of AWS cloud concepts, core services, security, architecture, and pricing. Credential ID: XXXXXXXX',
-      type: 'certification',
-      icon: 'fab fa-aws'
-    },
-    {
-      year: '2024',
-      title: 'Angular — The Complete Guide',
-      institution: 'Udemy — Maximilian Schwarzmüller',
-      description: 'Comprehensive course covering Angular fundamentals, RxJS, NgRx, routing, forms, HTTP, testing, and deployment best practices.',
-      type: 'certification',
-      icon: 'fab fa-angular'
-    },
-    {
-      year: '2023',
-      title: 'Docker & Kubernetes: The Practical Guide',
-      institution: 'Udemy — Maximilian Schwarzmüller',
-      description: 'Hands-on training with Docker containers, Docker Compose, Kubernetes orchestration, deployments, services, and volumes.',
-      type: 'certification',
-      icon: 'fab fa-docker'
-    },
-    {
-      year: '2020',
-      title: 'Baccalaureate in Experimental Sciences',
-      institution: 'High School — Tunisia',
-      description: 'Successfully completed the national baccalaureate examination with distinction in mathematics and physics.',
-      type: 'education',
-      icon: 'fas fa-school'
+export class EducationComponent implements OnInit, OnDestroy {
+  timelineItems: TimelineItem[] = [];
+  private langChangeSub!: Subscription;
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    this.loadItems();
+    this.langChangeSub = this.translate.onLangChange.subscribe(() => {
+      this.loadItems();
+    });
+  }
+
+  private loadItems(): void {
+    this.translate.get('EDUCATION_PAGE.ITEMS').subscribe((items: TimelineItem[]) => {
+      this.timelineItems = items;
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.langChangeSub) {
+      this.langChangeSub.unsubscribe();
     }
-  ];
+  }
 }
