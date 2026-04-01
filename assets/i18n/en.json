@@ -9,7 +9,7 @@
   "SKILLS": "Skills",
   "CONTACT_ME": "Contact Me",
   "QUIZ_TITLE": "Quiz",
-  "LANGUAGE": "Language",
+  "LANGUAGE": "EN",
   "VIEW_PROJECT": "View project",
   "VIEW_DETAILS": "View details",
   "WATCH_DEMO": "Watch Demo",
@@ -65,6 +65,87 @@
     }
   ],
 
+  "EDUCATION_PAGE": {
+    "TITLE": "Education & Certifications",
+    "BADGE_EDUCATION": "🎓 Education",
+    "BADGE_CERTIFICATION": "📜 Certification",
+    "CREDENTIAL": "Credential",
+    "ITEMS": [
+      {
+        "year": "2024 – 2027",
+        "title": "Engineering Degree in Computer Science",
+        "institution": "IIT — International Institute of Technology",
+        "description": "Specialization in software engineering, artificial intelligence, distributed systems, and cloud computing. Focus on Angular, Spring Boot, .NET.",
+        "type": "education",
+        "icon": "fas fa-university"
+      },
+      {
+        "year": "2021 – 2024",
+        "title": "Bachelor's Degree in Information and Communication Technologies",
+        "institution": "ENET'COM — National School of Electronics and Telecommunications",
+        "description": "Foundation in algorithms, data structures, object-oriented programming, databases, and networking.",
+        "type": "education",
+        "icon": "fas fa-graduation-cap"
+      },
+      {
+        "year": "2023",
+        "title": "Google Cybersecurity Professional Certificate",
+        "institution": "Google",
+        "description": "Validated understanding of cybersecurity concepts, tools, and best practices.",
+        "type": "certification",
+        "icon": "fab fa-google",
+        "credentialUrl": "https://coursera.org/share/8a1de5b011c508472639de3224dd158b"
+      },
+      {
+        "year": "2021",
+        "title": "Baccalaureate in Mathematics",
+        "institution": "High School — Tunisia",
+        "description": "Graduated with honors, demonstrating strong analytical and problem-solving skills.",
+        "type": "education",
+        "icon": "fas fa-school"
+      }
+    ]
+  },
+  "EXPERIENCE_PAGE": {
+    "TITLE": "Professional Experience",
+    "ITEMS": [
+      {
+        "period": "Jun 2025 – Aug 2025",
+        "role": "Full Stack Developer Intern",
+        "company": "Avantages Soft",
+        "location": "Sfax, Tunisia",
+        "description": "Developed a management web application (Showroom) handling stock, client records, user administration, and sales history. Built with Angular on the frontend and .NET on the backend with SQL Server. Implemented JWT-based authentication and role-based access control.",
+        "technologies": ["Angular", ".NET", "SQL Server", "JWT", "REST API", "Bootstrap"],
+        "icon": "fas fa-laptop-code"
+      },
+      {
+        "period": "Feb 2024 – Jun 2024",
+        "role": "Software Developer Intern",
+        "company": "Djagora Foundation",
+        "location": "Sfax, Tunisia",
+        "description": "Development of an Intelligent System for Driver Fatigue Detection, including system design, deep learning model implementation, embedded system realization, and mobile application development.",
+        "technologies": ["Dlib", "Mediapipe", "React Native", "Websocket", "Firebase", "Numpy", "Python"],
+        "icon": "fas fa-robot"
+      }
+    ]
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Get In Touch",
+    "CONNECT_TITLE": "Connect with me",
+    "CONNECT_DESC": "Feel free to reach out through any of these platforms or use the form to send me a message directly.",
+    "LABEL_NAME": "Name *",
+    "LABEL_EMAIL": "Email *",
+    "LABEL_SUBJECT": "Subject",
+    "LABEL_MESSAGE": "Message *",
+    "PLACEHOLDER_NAME": "Your name",
+    "PLACEHOLDER_EMAIL": "your.email@example.com",
+    "PLACEHOLDER_SUBJECT": "What's this about?",
+    "PLACEHOLDER_MESSAGE": "Tell me what you have in mind…",
+    "SEND": "Send Message",
+    "SENDING": "Sending…",
+    "SUCCESS": "Message sent successfully! I'll get back to you soon.",
+    "ERROR": "Oops! Something went wrong. Please try again or email me directly."
+  },
   "QUIZ": {
     "TITLE": "General Knowledge Quiz",
     "SUBMIT": "Submit",
