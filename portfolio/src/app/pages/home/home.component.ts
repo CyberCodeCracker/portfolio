@@ -15,22 +15,33 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('typedIntro', { static: false }) typedIntro!: ElementRef;
   @ViewChild('typedRest', { static: false }) typedRest!: ElementRef;
   private langChangeSubscription!: Subscription;
-  private typingTimeout: any;
+  /** Store ALL pending timeout IDs so we can cancel the entire chain */
+  private typingTimeouts: ReturnType<typeof setTimeout>[] = [];
+  private isFirstVisit: boolean;
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    this.isFirstVisit = !sessionStorage.getItem('portfolio_visited');
+  }
 
   ngAfterViewInit(): void {
-    this.setupTypingAnimation();
+    this.renderText();
+
     this.langChangeSubscription = this.translate.onLangChange.subscribe(() => {
-      this.setupTypingAnimation();
+      // Language changed — cancel every queued character timeout first
+      this.clearAllTimeouts();
+      this.renderText();
     });
   }
 
-  private setupTypingAnimation(): void {
-    if (this.typingTimeout) {
-      clearTimeout(this.typingTimeout);
+  /** Cancel every pending typing timeout — fixes the mixed-language bug */
+  private clearAllTimeouts(): void {
+    for (const id of this.typingTimeouts) {
+      clearTimeout(id);
     }
+    this.typingTimeouts = [];
+  }
 
+  private renderText(): void {
     this.translate.get('ABOUT').subscribe((text: string) => {
       const introEl: HTMLElement = this.typedIntro.nativeElement;
       const restEl: HTMLElement = this.typedRest.nativeElement;
@@ -43,12 +54,43 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       const introLines = lines.slice(0, 2);
       const restLines = lines.slice(2);
 
+      // Always clear previous content
       introEl.textContent = '';
       restEl.textContent = '';
+      introEl.classList.remove('slide-in');
+      restEl.classList.remove('slide-in');
 
-      this.typeLines(introEl, introLines, 0, () => {
-        this.typeLines(restEl, restLines, 0);
-      });
+      if (this.isFirstVisit) {
+        // First visit: typing animation
+        this.typeLines(introEl, introLines, 0, () => {
+          this.typeLines(restEl, restLines, 0, () => {
+            // Mark as visited only after animation completes
+            sessionStorage.setItem('portfolio_visited', 'true');
+            this.isFirstVisit = false;
+          });
+        });
+      } else {
+        // Returning visit: render instantly with slide-in animation
+        this.renderInstant(introEl, introLines);
+        this.renderInstant(restEl, restLines);
+        // Trigger reflow before adding class so the animation plays
+        void introEl.offsetWidth;
+        introEl.classList.add('slide-in');
+        restEl.classList.add('slide-in');
+      }
+    });
+  }
+
+  /** Render all lines instantly (no typing) */
+  private renderInstant(element: HTMLElement, lines: string[]): void {
+    lines.forEach((line, i) => {
+      const lineSpan = document.createElement('span');
+      lineSpan.classList.add('typed-line');
+      lineSpan.textContent = line;
+      element.appendChild(lineSpan);
+      if (i < lines.length - 1) {
+        element.appendChild(document.createElement('br'));
+      }
     });
   }
 
@@ -67,12 +109,14 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       if (charIdx < lines[lineIdx].length) {
         lineSpan.textContent += lines[lineIdx].charAt(charIdx);
         charIdx++;
-        this.typingTimeout = setTimeout(typeChar, 15);
+        const id = setTimeout(typeChar, 15);
+        this.typingTimeouts.push(id);
       } else {
         element.appendChild(document.createElement('br'));
-        this.typingTimeout = setTimeout(() => {
+        const id = setTimeout(() => {
           this.typeLines(element, lines, lineIdx + 1, done);
         }, 100);
+        this.typingTimeouts.push(id);
       }
     };
 
@@ -83,8 +127,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     if (this.langChangeSubscription) {
       this.langChangeSubscription.unsubscribe();
     }
-    if (this.typingTimeout) {
-      clearTimeout(this.typingTimeout);
-    }
+    this.clearAllTimeouts();
   }
 }
