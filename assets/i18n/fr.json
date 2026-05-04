@@ -16,6 +16,68 @@
   "ABOUT": "Développeur Full Stack | Angular | Spring Boot | .NET | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
   "PROJECTS_LIST": [
     {
+      "TITLE": "GymLite",
+      "SHORT_DESCRIPTION": "Une plateforme e-commerce en microservices pour parcourir, acheter et gérer du matériel de sport.",
+      "DESCRIPTION": "GymLite est une application e-commerce full-stack dédiée au matériel de sport, avec une vitrine Angular, un dashboard admin, la navigation produit, le panier, le checkout, la création de commandes, le paiement et l'authentification client.\n\nLe backend est construit en microservices Spring Boot avec API Gateway, Eureka, configuration centralisée, sécurité JWT, notifications Kafka, templates e-mail, persistance PostgreSQL et MongoDB, migrations Flyway, infrastructure Docker Compose et traçage Zipkin.",
+      "IMAGE_URL": "assets/imgs/gymlite/landing_light.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/gymlite/landing_light.png",
+        "assets/imgs/gymlite/home_cart.png",
+        "assets/imgs/gymlite/checkout_page.png",
+        "assets/imgs/gymlite/admin_dashboard.png",
+        "assets/imgs/gymlite/orders_table.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Page d'accueil de la boutique",
+        "Navigation produit et panier",
+        "Parcours de checkout",
+        "Tableau de bord admin",
+        "Tableau de gestion des commandes"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/GymLite",
+      "VIDEO_URL": ""
+    },
+    {
+      "TITLE": "FitGear",
+      "SHORT_DESCRIPTION": "Une plateforme de coaching en ligne pour les programmes, le suivi client et l'accompagnement sportif.",
+      "DESCRIPTION": "FitGear est une plateforme full-stack de coaching sportif qui aide les coachs à gérer leurs clients, assigner des programmes, consulter les progrès et organiser le suivi au même endroit.\n\nLes clients peuvent suivre leurs plans, enregistrer leurs entraînements et visualiser leur progression depuis une interface Angular claire, tandis que le backend Spring Boot soutient le flux de coaching avec des données structurées et des API sécurisées.",
+      "IMAGE_URL": "assets/imgs/fitgear/landing_page.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/fitgear/landing_page.png",
+        "assets/imgs/fitgear/client_dashboardpng.png",
+        "assets/imgs/fitgear/client_logs.png",
+        "assets/imgs/fitgear/coach_view_client.png",
+        "assets/imgs/fitgear/coach_assign_program.png",
+        "assets/imgs/fitgear/coach_reviews.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Page d'accueil",
+        "Tableau de bord client",
+        "Journal des entraînements",
+        "Vue client du coach",
+        "Assignation de programme",
+        "Avis du coach"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
+      "VIDEO_URL": ""
+    },
+    {
+      "TITLE": "Talksy",
+      "SHORT_DESCRIPTION": "Une application de messagerie légère pour les conversations privées et les groupes.",
+      "DESCRIPTION": "Talksy est une application de messagerie moderne inspirée de la simplicité de WhatsApp, conçue pour une communication rapide, fluide et conviviale.\n\nElle prend en charge le chat en temps réel avec WebSocket, les conversations privées, les groupes et une authentification sécurisée avec access tokens et refresh tokens. Le frontend est développé avec Angular, Bootstrap et SCSS, tandis que le backend repose sur Spring Boot, des API REST, JWT et PostgreSQL.",
+      "IMAGE_URL": "assets/imgs/talksy/home_page.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/talksy/home_page.png",
+        "assets/imgs/talksy/group_chat.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Page d'accueil",
+        "Chat de groupe"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Talksy",
+      "VIDEO_URL": ""
+    },
+    {
       "TITLE": "Showroom",
       "SHORT_DESCRIPTION": "Gérer les stocks, les clients, les comptes utilisateurs et l'historique des ventes — développé avec Angular & .NET.",
       "DESCRIPTION": "Dans le cadre de mon stage d'été, j'ai développé une application web de gestion conçue pour centraliser la gestion des stocks, des clients, des utilisateurs et de l’historique des ventes.\n\nLa plateforme garantit un suivi précis des stocks, une gestion fiable des clients et un accès basé sur les rôles pour différents types d’utilisateurs.\n\nDéveloppée avec Angular pour le frontend afin d’offrir une expérience interactive et conviviale, et .NET pour le backend afin d’assurer des API sécurisées et une logique métier solide, l’application simplifie les opérations quotidiennes, améliore la cohérence des données et fournit des analyses claires grâce au suivi et aux rapports des ventes.",
@@ -53,14 +115,6 @@
       "DESCRIPTION": "TO-DO est une application web simple conçue pour aider les utilisateurs à gérer efficacement leurs tâches quotidiennes.\n\nElle permet de créer, modifier et supprimer des tâches via une interface simple.\n\nDéveloppée avec Angular, TO-DO offre une expérience claire et conviviale pour rester organisé et productif.",
       "IMAGE_URL": "assets/imgs/to-do.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do",
-      "VIDEO_URL": ""
-    },
-    {
-      "TITLE": "FitGear",
-      "SHORT_DESCRIPTION": "Une plateforme interactive où les coachs peuvent accompagner leurs clients en ligne, développée avec Angular & Spring Boot.",
-      "DESCRIPTION": "FitGear est une application web complète conçue pour faciliter le coaching en ligne et la gestion fitness.\n\nElle permet aux coachs de créer et gérer des programmes d’entraînement et des plans alimentaires, de suivre les progrès des clients et de communiquer efficacement.\n\nLes clients peuvent enregistrer leurs séances, suivre leur progression et recevoir un accompagnement personnalisé.\n\nDéveloppée avec Angular pour le frontend et Spring Boot pour le backend, FitGear offre une expérience fluide et interactive.",
-      "IMAGE_URL": "assets/imgs/progress.webp",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
       "VIDEO_URL": ""
     }
   ],
@@ -114,7 +168,14 @@
         "company": "Avantages Soft",
         "location": "Sfax, Tunisie",
         "description": "Développement d'une application web de gestion (Showroom) pour la gestion des stocks, des dossiers clients, de l'administration des utilisateurs et de l'historique des ventes. Construit avec Angular côté frontend et .NET côté backend avec SQL Server. Mise en œuvre de l'authentification basée sur JWT et du contrôle d'accès basé sur les rôles.",
-        "technologies": ["Angular", ".NET", "SQL Server", "JWT", "REST API", "Bootstrap"],
+        "technologies": [
+          "Angular",
+          ".NET",
+          "SQL Server",
+          "JWT",
+          "REST API",
+          "Bootstrap"
+        ],
         "icon": "fas fa-laptop-code"
       },
       {
@@ -123,7 +184,15 @@
         "company": "Djagora Foundation",
         "location": "Sfax, Tunisie",
         "description": "Développement d'un système intelligent de détection de la fatigue des conducteurs, incluant la conception du système, l'implémentation du modèle d'apprentissage profond, la réalisation du système embarqué et le développement de l'application mobile.",
-        "technologies": ["Dlib", "Mediapipe", "React Native", "Websocket", "Firebase", "Numpy", "Python"],
+        "technologies": [
+          "Dlib",
+          "Mediapipe",
+          "React Native",
+          "Websocket",
+          "Firebase",
+          "Numpy",
+          "Python"
+        ],
         "icon": "fas fa-robot"
       }
     ]
