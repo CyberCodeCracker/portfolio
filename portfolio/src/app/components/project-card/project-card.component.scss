@@ -5,12 +5,18 @@
   display: flex;
   flex-direction: column;
   height: 400px;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  content-visibility: auto;
+  contain-intrinsic-size: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.22);
 }
 
 .slide-in {

@@ -1,6 +1,6 @@
-<section class="projects glass">
+<section class="projects">
   <h2 class="section-title"><i class="fas fa-code"></i> {{ 'PROJECTS' | translate }}</h2>
-  <div class="project-list">
+  <div class="project-list" [class.even-projects]="hasEvenProjectCount()">
     <app-project-card
       *ngFor="let project of projects"
       [projectTitle]="project.TITLE"
@@ -27,17 +27,66 @@
     </button>
     <h3 id="dialog-title">{{ selectedProject!.TITLE }}</h3>
 
-    <!-- Video in dialog if available -->
-    <video *ngIf="selectedProject!.VIDEO_URL"
-           [src]="selectedProject!.VIDEO_URL"
-           controls
-           class="dialog-video">
-    </video>
+    <div *ngIf="selectedProject!.IMAGE_GALLERY?.length; else singleMedia" class="gallery">
+      <div class="gallery-stage">
+        <button type="button" class="gallery-nav prev" aria-label="Previous image" (click)="previousImage()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
 
-    <img *ngIf="!selectedProject!.VIDEO_URL"
-         [src]="selectedProject!.IMAGE_URL"
-         [alt]="selectedProject!.TITLE"
-         class="dialog-image" />
+        <button
+          type="button"
+          class="gallery-preview"
+          aria-label="Open larger image"
+          (click)="openImagePreview(getGalleryImages(selectedProject!)[activeImageIndex])"
+        >
+          <img
+            [src]="getGalleryImages(selectedProject!)[activeImageIndex]"
+            [alt]="selectedProject!.TITLE + ' screenshot ' + (activeImageIndex + 1)"
+            decoding="async"
+          />
+        </button>
+
+        <button type="button" class="gallery-nav next" aria-label="Next image" (click)="nextImage()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="gallery-meta">
+        <span>{{ activeImageIndex + 1 }} / {{ getGalleryImages(selectedProject!).length }}</span>
+        <strong>{{ getGalleryCaption(selectedProject!, activeImageIndex) }}</strong>
+      </div>
+
+      <div class="gallery-thumbs" aria-label="Project screenshots">
+        <button
+          *ngFor="let image of getGalleryImages(selectedProject!); let index = index"
+          type="button"
+          class="gallery-thumb"
+          [class.active]="index === activeImageIndex"
+          (click)="selectImage(index)"
+          [attr.aria-label]="'Show screenshot ' + (index + 1)"
+        >
+          <img
+            [src]="image"
+            [alt]="selectedProject!.TITLE + ' thumbnail ' + (index + 1)"
+            loading="lazy"
+            decoding="async"
+          />
+        </button>
+      </div>
+    </div>
+
+    <ng-template #singleMedia>
+      <video *ngIf="selectedProject!.VIDEO_URL"
+             [src]="selectedProject!.VIDEO_URL"
+             controls
+             class="dialog-video">
+      </video>
+
+      <img *ngIf="!selectedProject!.VIDEO_URL"
+           [src]="selectedProject!.IMAGE_URL"
+           [alt]="selectedProject!.TITLE"
+           class="dialog-image" />
+    </ng-template>
 
     <p class="dialog-description">{{ selectedProject!.DESCRIPTION }}</p>
     <a *ngIf="selectedProject!.PROJECT_URL !== 'Project is private' && selectedProject!.PROJECT_URL !== 'Projet privé'"
@@ -47,5 +96,17 @@
     <span *ngIf="selectedProject!.PROJECT_URL === 'Project is private' || selectedProject!.PROJECT_URL === 'Projet privé'" class="dialog-link private">
       <i class="fas fa-lock"></i> {{ selectedProject!.PROJECT_URL }}
     </span>
+  </div>
+
+  <div *ngIf="enlargedImage" class="image-preview-overlay" (click)="closeImagePreview()">
+    <button type="button" class="preview-close" aria-label="Close larger image" (click)="closeImagePreview()">
+      <i class="fas fa-times"></i>
+    </button>
+    <img
+      [src]="enlargedImage"
+      [alt]="selectedProject!.TITLE + ' enlarged screenshot'"
+      class="image-preview"
+      (click)="$event.stopPropagation()"
+    />
   </div>
 </section>

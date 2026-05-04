@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { Subscription, filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +13,27 @@ import { HomeComponent } from './pages/home/home.component';
 export class AppComponent implements AfterViewInit, OnDestroy {
   title = 'portfolio';
   private animationId: number = 0;
+  private particlesPaused = false;
+  private routeSubscription?: Subscription;
 
   @ViewChild('particlesCanvas', { static: false }) canvasRef!: ElementRef<HTMLCanvasElement>;
 
+  constructor(private router: Router) {}
+
   ngAfterViewInit(): void {
     this.initParticles();
+    this.particlesPaused = this.router.url.includes('/projects');
+    this.routeSubscription = this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.particlesPaused = event.urlAfterRedirects.includes('/projects');
+      });
     window.addEventListener('resize', this.handleResize);
   }
 
   ngOnDestroy(): void {
     cancelAnimationFrame(this.animationId);
+    this.routeSubscription?.unsubscribe();
     window.removeEventListener('resize', this.handleResize);
   }
 
@@ -61,7 +73,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     ];
 
     const particles: Particle[] = [];
-    const count = Math.min(100, Math.floor(window.innerWidth / 15));
+    const count = Math.min(60, Math.floor(window.innerWidth / 22));
 
     for (let i = 0; i < count; i++) {
       particles.push({
@@ -77,6 +89,11 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (this.particlesPaused) {
+        this.animationId = requestAnimationFrame(animate);
+        return;
+      }
 
       particles.forEach((p) => {
         p.x += p.vx;

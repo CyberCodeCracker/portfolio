@@ -1,8 +1,15 @@
 <!-- project-card.component.html -->
-<div class="project-container glass slide-in">
+<div class="project-container slide-in">
   <!-- Image / Video toggle area -->
   <div class="media-wrapper">
-    <img *ngIf="!showVideo" [src]="projectImageUrl" [alt]="projectTitle" class="project-image" />
+    <img
+      *ngIf="!showVideo"
+      [src]="projectImageUrl"
+      [alt]="projectTitle"
+      class="project-image"
+      loading="lazy"
+      decoding="async"
+    />
     <video *ngIf="showVideo && projectVideoUrl"
            [src]="projectVideoUrl"
            controls autoplay

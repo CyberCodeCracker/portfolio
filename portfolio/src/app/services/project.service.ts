@@ -5,6 +5,8 @@ import { BehaviorSubject, Observable, Subscription } from "rxjs";
 export interface Project {
   TITLE: string;
   IMAGE_URL: string;
+  IMAGE_GALLERY?: string[];
+  IMAGE_CAPTIONS?: string[];
   SHORT_DESCRIPTION: string;
   DESCRIPTION: string;
   PROJECT_URL: string;

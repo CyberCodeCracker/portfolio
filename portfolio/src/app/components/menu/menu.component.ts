@@ -15,9 +15,9 @@ export class MenuComponent {
   menuOpen = false;
 
   constructor() {
-    this.translateService.setDefaultLang('en');
-    const savedLang = localStorage.getItem('language') || 'en';
-    this.translateService.use(savedLang);
+    // Language is already initialised by APP_INITIALIZER in main.ts.
+    // Do NOT call translate.use() here — it would fire onLangChange after
+    // HomeComponent subscribes and break the first-visit typing animation.
   }
 
   toggleMenu() {

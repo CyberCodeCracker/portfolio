@@ -16,6 +16,68 @@
   "ABOUT": "Full Stack Developer | Angular | Spring Boot | .NET | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it's not just about code. When I'm not engineering software, you'll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it's all about constant growth — in tech, in strength, and in life.",
   "PROJECTS_LIST": [
     {
+      "TITLE": "GymLite",
+      "SHORT_DESCRIPTION": "A microservices e-commerce platform for browsing, buying, and managing gym equipment.",
+      "DESCRIPTION": "GymLite is a full-stack e-commerce application for gym equipment, with an Angular storefront, an admin dashboard, product browsing, cart and checkout flows, order creation, payment handling, and customer authentication.\n\nThe backend is built as Spring Boot microservices with an API Gateway, Eureka service discovery, centralized configuration, JWT security, Kafka notifications, email templates, PostgreSQL and MongoDB persistence, Flyway migrations, Docker Compose infrastructure, and Zipkin tracing.",
+      "IMAGE_URL": "assets/imgs/gymlite/landing_light.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/gymlite/landing_light.png",
+        "assets/imgs/gymlite/home_cart.png",
+        "assets/imgs/gymlite/checkout_page.png",
+        "assets/imgs/gymlite/admin_dashboard.png",
+        "assets/imgs/gymlite/orders_table.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Storefront landing page",
+        "Product browsing and cart",
+        "Checkout flow",
+        "Admin dashboard",
+        "Orders management table"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/GymLite",
+      "VIDEO_URL": ""
+    },
+    {
+      "TITLE": "FitGear",
+      "SHORT_DESCRIPTION": "An online coaching platform for programs, client progress, and trainer-client follow-up.",
+      "DESCRIPTION": "FitGear is a full-stack fitness coaching platform that helps trainers manage clients, assign workout programs, review progress, and keep coaching organized in one place.\n\nClients can follow their plans, log workouts, and track their progress through a clean Angular interface, while the Spring Boot backend supports the coaching workflow with structured data and secure APIs.",
+      "IMAGE_URL": "assets/imgs/fitgear/landing_page.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/fitgear/landing_page.png",
+        "assets/imgs/fitgear/client_dashboardpng.png",
+        "assets/imgs/fitgear/client_logs.png",
+        "assets/imgs/fitgear/coach_view_client.png",
+        "assets/imgs/fitgear/coach_assign_program.png",
+        "assets/imgs/fitgear/coach_reviews.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Landing page",
+        "Client dashboard",
+        "Workout logs",
+        "Coach client overview",
+        "Program assignment",
+        "Coach reviews"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
+      "VIDEO_URL": ""
+    },
+    {
+      "TITLE": "Talksy",
+      "SHORT_DESCRIPTION": "A lightweight real-time messaging app for private and group conversations.",
+      "DESCRIPTION": "Talksy is a modern messaging application inspired by the simplicity of WhatsApp, focused on fast and friendly communication.\n\nIt supports real-time WebSocket chat, one-to-one conversations, group messaging, and secure authentication with access and refresh tokens. The frontend is built with Angular, Bootstrap, and SCSS, while the backend uses Spring Boot, REST APIs, JWT security, and PostgreSQL.",
+      "IMAGE_URL": "assets/imgs/talksy/home_page.png",
+      "IMAGE_GALLERY": [
+        "assets/imgs/talksy/home_page.png",
+        "assets/imgs/talksy/group_chat.png"
+      ],
+      "IMAGE_CAPTIONS": [
+        "Home page",
+        "Group chat"
+      ],
+      "PROJECT_URL": "https://github.com/CyberCodeCracker/Talksy",
+      "VIDEO_URL": ""
+    },
+    {
       "TITLE": "Showroom",
       "SHORT_DESCRIPTION": "Manage inventory, clients, user accounts, and sales history — built with Angular & .NET.",
       "DESCRIPTION": "As part of my summer internship, I developed a Management Web Application designed to handle stock, client records, user administration, and sales history in a centralized system.\n\nThe platform ensures accurate inventory tracking, reliable client management, and role-based access for different types of web users.\n\nBuilt with Angular on the frontend for an interactive and user-friendly experience and .NET on the backend for secure APIs and solid business logic, the application streamlines daily operations, improves data consistency, and provides clear insights through historical sales tracking and reporting.",
@@ -54,17 +116,8 @@
       "IMAGE_URL": "assets/imgs/to-do.png",
       "PROJECT_URL": "https://github.com/CyberCodeCracker/To-Do",
       "VIDEO_URL": ""
-    },
-    {
-      "TITLE": "FitGear",
-      "SHORT_DESCRIPTION": "An interactive platform where coaches can use the powers of online-coaching to tutor their clients, built with Angular & Spring Boot.",
-      "DESCRIPTION": "FitGear is a comprehensive web application designed to facilitate online coaching and fitness management.\n\nThe platform allows coaches to create and manage workout programs and diet plans, track client progress, and communicate effectively with their clients.\n\nClients can log their workouts, monitor their progress, and receive personalized coaching from their trainers.\n\nBuilt with Angular for the frontend and Spring Boot for the backend, FitGear offers a seamless and interactive experience for both coaches and clients, making it easier to achieve fitness goals through structured guidance and support.",
-      "IMAGE_URL": "assets/imgs/progress.webp",
-      "PROJECT_URL": "https://github.com/CyberCodeCracker/FitGear",
-      "VIDEO_URL": ""
     }
   ],
-
   "EDUCATION_PAGE": {
     "TITLE": "Education & Certifications",
     "BADGE_EDUCATION": "🎓 Education",
@@ -115,7 +168,14 @@
         "company": "Avantages Soft",
         "location": "Sfax, Tunisia",
         "description": "Developed a management web application (Showroom) handling stock, client records, user administration, and sales history. Built with Angular on the frontend and .NET on the backend with SQL Server. Implemented JWT-based authentication and role-based access control.",
-        "technologies": ["Angular", ".NET", "SQL Server", "JWT", "REST API", "Bootstrap"],
+        "technologies": [
+          "Angular",
+          ".NET",
+          "SQL Server",
+          "JWT",
+          "REST API",
+          "Bootstrap"
+        ],
         "icon": "fas fa-laptop-code"
       },
       {
@@ -124,7 +184,15 @@
         "company": "Djagora Foundation",
         "location": "Sfax, Tunisia",
         "description": "Development of an Intelligent System for Driver Fatigue Detection, including system design, deep learning model implementation, embedded system realization, and mobile application development.",
-        "technologies": ["Dlib", "Mediapipe", "React Native", "Websocket", "Firebase", "Numpy", "Python"],
+        "technologies": [
+          "Dlib",
+          "Mediapipe",
+          "React Native",
+          "Websocket",
+          "Firebase",
+          "Numpy",
+          "Python"
+        ],
         "icon": "fas fa-robot"
       }
     ]
@@ -168,7 +236,12 @@
       },
       {
         "question": "Which planet is known as the Red Planet due to its reddish appearance?",
-        "options": ["A) Jupiter", "B) Mars", "C) Venus", "D) Mercury"],
+        "options": [
+          "A) Jupiter",
+          "B) Mars",
+          "C) Venus",
+          "D) Mercury"
+        ],
         "correct_answer": "B",
         "explanation": "Mars is called the Red Planet because of its reddish surface, caused by iron oxide (rust) on its terrain."
       },
@@ -185,13 +258,23 @@
       },
       {
         "question": "What is the chemical symbol for gold?",
-        "options": ["A) Ag", "B) Au", "C) Fe", "D) Cu"],
+        "options": [
+          "A) Ag",
+          "B) Au",
+          "C) Fe",
+          "D) Cu"
+        ],
         "correct_answer": "B",
         "explanation": "Au is the chemical symbol for gold, derived from the Latin word 'aurum,' meaning shining dawn."
       },
       {
         "question": "Which country hosted the 2016 Summer Olympics?",
-        "options": ["A) China", "B) Brazil", "C) Japan", "D) United Kingdom"],
+        "options": [
+          "A) China",
+          "B) Brazil",
+          "C) Japan",
+          "D) United Kingdom"
+        ],
         "correct_answer": "B",
         "explanation": "Brazil hosted the 2016 Summer Olympics in Rio de Janeiro, marking the first time South America hosted the event."
       },
@@ -208,19 +291,34 @@
       },
       {
         "question": "In which year did the Titanic sink?",
-        "options": ["A) 1905", "B) 1912", "C) 1920", "D) 1898"],
+        "options": [
+          "A) 1905",
+          "B) 1912",
+          "C) 1920",
+          "D) 1898"
+        ],
         "correct_answer": "B",
         "explanation": "The Titanic sank on April 15, 1912, after hitting an iceberg on its maiden voyage, resulting in over 1,500 deaths."
       },
       {
         "question": "Which programming language was created first?",
-        "options": ["A) Python", "B) Java", "C) C++", "D) Fortran"],
+        "options": [
+          "A) Python",
+          "B) Java",
+          "C) C++",
+          "D) Fortran"
+        ],
         "correct_answer": "D",
         "explanation": "Fortran, developed in the 1950s by IBM, is one of the earliest programming languages, predating C++ (1980s), Java (1995), and Python (1990)."
       },
       {
         "question": "What is the longest river in the world?",
-        "options": ["A) Amazon", "B) Nile", "C) Yangtze", "D) Mississippi"],
+        "options": [
+          "A) Amazon",
+          "B) Nile",
+          "C) Yangtze",
+          "D) Mississippi"
+        ],
         "correct_answer": "B",
         "explanation": "The Nile River, at approximately 6,650 km, is considered the longest river, flowing through northeastern Africa."
       },
