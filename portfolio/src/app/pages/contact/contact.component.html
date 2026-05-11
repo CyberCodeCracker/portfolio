@@ -5,23 +5,46 @@
 
   <div class="contact-wrapper">
     <!-- Left: Social links -->
-    <div class="social-panel glass">
-      <h3>{{ 'CONTACT_PAGE.CONNECT_TITLE' | translate }}</h3>
-      <p>{{ 'CONTACT_PAGE.CONNECT_DESC' | translate }}</p>
+    <div class="contact-aside">
+      <div class="social-panel glass">
+        <h3>{{ 'CONTACT_PAGE.CONNECT_TITLE' | translate }}</h3>
+        <p>{{ 'CONTACT_PAGE.CONNECT_DESC' | translate }}</p>
 
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/souhail-amouri-293294352/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
-          <i class="fab fa-linkedin-in"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/CyberCodeCracker" target="_blank" rel="noopener noreferrer" class="social-link github">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
-        <a href="mailto:souhailamouri123@gmail.com" class="social-link email">
-          <i class="fas fa-envelope"></i>
-          <span>souhailamouri123&#64;gmail.com</span>
-        </a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/souhail-amouri-293294352/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/CyberCodeCracker" target="_blank" rel="noopener noreferrer" class="social-link github">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:souhailamouri123@gmail.com" class="social-link email">
+            <i class="fas fa-envelope"></i>
+            <span>souhailamouri123&#64;gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-info-panel glass">
+        <h3>{{ 'CONTACT_PAGE.INFO_TITLE' | translate }}</h3>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>{{ 'CONTACT_PAGE.INFO_LOCATION_LABEL' | translate }}</span>
+              <strong>{{ 'CONTACT_PAGE.INFO_LOCATION_VALUE' | translate }}</strong>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <span>{{ 'CONTACT_PAGE.INFO_AVAILABILITY_LABEL' | translate }}</span>
+              <strong>{{ 'CONTACT_PAGE.INFO_AVAILABILITY_VALUE' | translate }}</strong>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
