@@ -70,10 +70,7 @@
         "assets/imgs/talksy/home_page.png",
         "assets/imgs/talksy/group_chat.png"
       ],
-      "IMAGE_CAPTIONS": [
-        "Home page",
-        "Group chat"
-      ],
+      "IMAGE_CAPTIONS": ["Home page", "Group chat"],
       "PROJECT_URL": "https://github.com/CyberCodeCracker/Talksy",
       "VIDEO_URL": ""
     },
@@ -131,6 +128,15 @@
         "description": "Specialization in software engineering, artificial intelligence, distributed systems, and cloud computing. Focus on Angular, Spring Boot, .NET.",
         "type": "education",
         "icon": "fas fa-university"
+      },
+      {
+        "year": "2026",
+        "title": "AWS Cloud Solutions Architect Professional Certificate",
+        "institution": "AWS",
+        "description": "Validated understanding of cloud architecture concepts, AWS services, and best practices for designing secure, scalable, and resilient cloud solutions.",
+        "type": "certification",
+        "icon": "fab fa-amazon",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/9GJIB20V7CLK"
       },
       {
         "year": "2021 – 2024",
@@ -241,12 +247,7 @@
       },
       {
         "question": "Which planet is known as the Red Planet due to its reddish appearance?",
-        "options": [
-          "A) Jupiter",
-          "B) Mars",
-          "C) Venus",
-          "D) Mercury"
-        ],
+        "options": ["A) Jupiter", "B) Mars", "C) Venus", "D) Mercury"],
         "correct_answer": "B",
         "explanation": "Mars is called the Red Planet because of its reddish surface, caused by iron oxide (rust) on its terrain."
       },
@@ -263,23 +264,13 @@
       },
       {
         "question": "What is the chemical symbol for gold?",
-        "options": [
-          "A) Ag",
-          "B) Au",
-          "C) Fe",
-          "D) Cu"
-        ],
+        "options": ["A) Ag", "B) Au", "C) Fe", "D) Cu"],
         "correct_answer": "B",
         "explanation": "Au is the chemical symbol for gold, derived from the Latin word 'aurum,' meaning shining dawn."
       },
       {
         "question": "Which country hosted the 2016 Summer Olympics?",
-        "options": [
-          "A) China",
-          "B) Brazil",
-          "C) Japan",
-          "D) United Kingdom"
-        ],
+        "options": ["A) China", "B) Brazil", "C) Japan", "D) United Kingdom"],
         "correct_answer": "B",
         "explanation": "Brazil hosted the 2016 Summer Olympics in Rio de Janeiro, marking the first time South America hosted the event."
       },
@@ -296,34 +287,19 @@
       },
       {
         "question": "In which year did the Titanic sink?",
-        "options": [
-          "A) 1905",
-          "B) 1912",
-          "C) 1920",
-          "D) 1898"
-        ],
+        "options": ["A) 1905", "B) 1912", "C) 1920", "D) 1898"],
         "correct_answer": "B",
         "explanation": "The Titanic sank on April 15, 1912, after hitting an iceberg on its maiden voyage, resulting in over 1,500 deaths."
       },
       {
         "question": "Which programming language was created first?",
-        "options": [
-          "A) Python",
-          "B) Java",
-          "C) C++",
-          "D) Fortran"
-        ],
+        "options": ["A) Python", "B) Java", "C) C++", "D) Fortran"],
         "correct_answer": "D",
         "explanation": "Fortran, developed in the 1950s by IBM, is one of the earliest programming languages, predating C++ (1980s), Java (1995), and Python (1990)."
       },
       {
         "question": "What is the longest river in the world?",
-        "options": [
-          "A) Amazon",
-          "B) Nile",
-          "C) Yangtze",
-          "D) Mississippi"
-        ],
+        "options": ["A) Amazon", "B) Nile", "C) Yangtze", "D) Mississippi"],
         "correct_answer": "B",
         "explanation": "The Nile River, at approximately 6,650 km, is considered the longest river, flowing through northeastern Africa."
       },

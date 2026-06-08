@@ -70,10 +70,7 @@
         "assets/imgs/talksy/home_page.png",
         "assets/imgs/talksy/group_chat.png"
       ],
-      "IMAGE_CAPTIONS": [
-        "Page d'accueil",
-        "Chat de groupe"
-      ],
+      "IMAGE_CAPTIONS": ["Page d'accueil", "Chat de groupe"],
       "PROJECT_URL": "https://github.com/CyberCodeCracker/Talksy",
       "VIDEO_URL": ""
     },
@@ -131,6 +128,15 @@
         "description": "Spécialisation en génie logiciel, intelligence artificielle, systèmes distribués et cloud computing. Focus sur Angular, Spring Boot, .NET.",
         "type": "education",
         "icon": "fas fa-university"
+      },
+      {
+        "year": "2026",
+        "title": "Certificat professionnel AWS Cloud Solutions Architect",
+        "institution": "AWS",
+        "description": "Validation de la compréhension des concepts d’architecture cloud, des services AWS et des bonnes pratiques pour concevoir des solutions cloud sécurisées, évolutives et résilientes.",
+        "type": "certification",
+        "icon": "fab fa-amazon",
+        "credentialUrl": "https://www.coursera.org/account/accomplishments/specialization/9GJIB20V7CLK"
       },
       {
         "year": "2021 – 2024",
