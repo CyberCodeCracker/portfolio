@@ -21,6 +21,10 @@
         </div>
       </div>
 
+      <div class="card-image" *ngIf="exp.image">
+        <img [src]="exp.image" [alt]="exp.company" />
+      </div>
+
       <p class="description">{{ exp.description }}</p>
 
       <div class="tech-tags">

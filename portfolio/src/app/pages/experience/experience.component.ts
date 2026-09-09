@@ -11,6 +11,7 @@ interface ExperienceItem {
   description: string;
   technologies: string[];
   icon: string;
+  image?: string;
 }
 
 @Component({

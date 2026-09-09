@@ -13,7 +13,7 @@
   "VIEW_PROJECT": "Voir le projet",
   "VIEW_DETAILS": "Voir les détails",
   "WATCH_DEMO": "Voir la démo",
-  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | .NET | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
+  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | AWS | .NET | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
   "PROJECTS_LIST": [
     {
       "TITLE": "GymLite",
@@ -168,6 +168,23 @@
   "EXPERIENCE_PAGE": {
     "TITLE": "Expérience Professionnelle",
     "ITEMS": [
+      {
+        "period": "Juin 2026 – Août 2026",
+        "role": "Développeur Spring Boot / Angular Stagiaire",
+        "company": "Unilog",
+        "location": "Sfax, Tunisie",
+        "description": "Conception d'un système de gestion d'entrepôts multi-sites en Spring Boot 4 et Angular 19, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable. Sécurisation des API par limitation de débit avec Bucket4j, authentification par jeton et RBAC, isolation des opérations d'administration sur un port non exposé, pagination et recherche côté serveur sur tous les points de terminaison.",
+        "technologies": [
+          "Spring Boot",
+          "Angular 19",
+          "PostgreSQL",
+          "Bucket4j",
+          "Spring AI",
+          "Docker"
+        ],
+        "icon": "fas fa-warehouse",
+        "image": ""
+      },
       {
         "period": "Juin 2025 – Août 2025",
         "role": "Développeur Full Stack Stagiaire",

@@ -68,6 +68,18 @@
   margin-right: 3px;
 }
 
+.card-image {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
 .description {
   font-size: 0.92rem;
   line-height: 1.7;
