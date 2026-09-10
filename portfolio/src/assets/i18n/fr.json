@@ -91,7 +91,7 @@
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Réseau Social de Livres",
+      "TITLE": "Book Social Network",
       "SHORT_DESCRIPTION": "Une plateforme sociale pour les amateurs de livres afin de partager leurs ouvrages, développée avec Angular & Spring Boot.",
       "DESCRIPTION": "Book Social Network est une application full-stack qui permet aux utilisateurs de gérer leurs collections de livres et d’interagir avec une communauté de passionnés.\n\nElle propose des fonctionnalités telles que l’inscription des utilisateurs, la validation sécurisée par e-mail, la gestion des livres (création, mise à jour, partage et archivage), l’emprunt de livres avec vérification de disponibilité, le retour des livres et l’approbation des retours.\n\nL’application garantit la sécurité grâce aux tokens JWT et respecte les bonnes pratiques de conception des API REST. Le backend est développé avec Spring Boot 3 et Spring Security 6, tandis que le frontend est réalisé avec Angular et Bootstrap pour le style.",
       "IMAGE_URL": "assets/imgs/bsn.png",
@@ -99,7 +99,7 @@
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Calculateur d’Investissement",
+      "TITLE": "Investment Calculator",
       "SHORT_DESCRIPTION": "Une application web pour calculer la croissance des investissements dans le temps, développée avec Angular.",
       "DESCRIPTION": "Le calculateur d’investissement est une application web conçue pour aider les utilisateurs à estimer la valeur future de leurs investissements selon différents paramètres.\n\nLes utilisateurs peuvent saisir des informations telles que le montant initial, les contributions mensuelles, le taux de rendement annuel attendu et la durée d’investissement.\n\nL’application calcule ensuite la croissance projetée et affiche les résultats, offrant des insights sur l’impact des différents facteurs.\n\nCet outil est particulièrement utile pour les personnes planifiant leur avenir financier.\n\nDéveloppée avec Angular, l’application propose une interface conviviale facilitant la saisie des données et la visualisation des résultats.",
       "IMAGE_URL": "assets/imgs/investment.png",
