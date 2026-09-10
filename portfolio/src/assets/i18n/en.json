@@ -186,13 +186,13 @@
     "ITEMS": [
       {
         "period": "Jun 2026 – Aug 2026",
-        "role": "Spring Boot / Angular Developer Intern",
+        "role": "Full Stack Developer Intern",
         "company": "Unilog",
         "location": "Sfax, Tunisia",
-        "description": "Designed a multi-site warehouse management system in Spring Boot 4 and Angular 19, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger. Secured the APIs with rate limiting via Bucket4j, token-based authentication and RBAC, isolated admin operations on a non-exposed port, and server-side pagination and search across all endpoints.",
+        "description": "Designed a multi-site warehouse management system in Spring Boot 4 and Angular, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger. Secured the APIs with rate limiting via Bucket4j, token-based authentication and RBAC, isolated admin operations on a non-exposed port, and server-side pagination and search across all endpoints.",
         "technologies": [
           "Spring Boot",
-          "Angular 19",
+          "Angular",
           "PostgreSQL",
           "Bucket4j",
           "Spring AI",

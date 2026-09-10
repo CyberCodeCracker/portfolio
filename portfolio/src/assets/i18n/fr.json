@@ -186,13 +186,13 @@
     "ITEMS": [
       {
         "period": "Juin 2026 – Août 2026",
-        "role": "Développeur Spring Boot / Angular Stagiaire",
+        "role": "Développeur Full Stack Stagiaire",
         "company": "Unilog",
         "location": "Sfax, Tunisie",
-        "description": "Conception d'un système de gestion d'entrepôts multi-sites en Spring Boot 4 et Angular 19, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable. Sécurisation des API par limitation de débit avec Bucket4j, authentification par jeton et RBAC, isolation des opérations d'administration sur un port non exposé, pagination et recherche côté serveur sur tous les points de terminaison.",
+        "description": "Conception d'un système de gestion d'entrepôts multi-sites en Spring Boot 4 et Angular, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable. Sécurisation des API par limitation de débit avec Bucket4j, authentification par jeton et RBAC, isolation des opérations d'administration sur un port non exposé, pagination et recherche côté serveur sur tous les points de terminaison.",
         "technologies": [
           "Spring Boot",
-          "Angular 19",
+          "Angular",
           "PostgreSQL",
           "Bucket4j",
           "Spring AI",
