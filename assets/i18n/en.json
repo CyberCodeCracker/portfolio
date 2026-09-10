@@ -13,7 +13,7 @@
   "VIEW_PROJECT": "View project",
   "VIEW_DETAILS": "View details",
   "WATCH_DEMO": "Watch Demo",
-  "ABOUT": "Full Stack Developer | Angular | Spring Boot | .NET | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it's not just about code. When I'm not engineering software, you'll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it's all about constant growth — in tech, in strength, and in life.",
+  "ABOUT": "Full Stack Developer | Angular | Spring Boot | AWS | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it's not just about code. When I'm not engineering software, you'll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it's all about constant growth — in tech, in strength, and in life.",
   "PROJECTS_LIST": [
     {
       "TITLE": "GymLite",
@@ -83,6 +83,14 @@
       "VIDEO_URL": ""
     },
     {
+      "TITLE": "Unilog Warehouse Management",
+      "SHORT_DESCRIPTION": "A multi-site warehouse management system with real-time stock tracking, built with Spring Boot & Angular.",
+      "DESCRIPTION": "As part of my internship at Unilog, I designed a multi-site warehouse management system in Spring Boot and Angular 19, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger.\n\nThe APIs are secured with rate limiting via Bucket4j, token-based authentication, and role-based access control (RBAC), with admin operations isolated on a non-exposed port, plus server-side pagination and search across all endpoints.\n\nStack: Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
+      "IMAGE_URL": "assets/imgs/logo.png",
+      "PROJECT_URL": "Project is private",
+      "VIDEO_URL": ""
+    },
+    {
       "TITLE": "Book Social Network",
       "SHORT_DESCRIPTION": "A social platform for book lovers to share their books, built with Angular & Spring Boot.",
       "DESCRIPTION": "Book Social Network is a full-stack application that enables users to manage their book collections and engage with a community of book enthusiasts.\n\nIt offers features such as user registration, secure email validation, book management (including creation, updating, sharing, and archiving), book borrowing with checks for availability, book return functionality, and approval of book returns.\n\nThe application ensures security using JWT tokens and adheres to best practices in REST API design. The backend is built with Spring Boot 3 and Spring Security 6, while the frontend is developed using Angular with Bootstrap for styling.",
@@ -121,6 +129,14 @@
     "BADGE_CERTIFICATION": "📜 Certification",
     "CREDENTIAL": "Credential",
     "ITEMS": [
+      {
+        "year": "Sept. 2026 – Present",
+        "title": "Academic Exchange – Engineering in Digital Sciences, Cybersecurity track",
+        "institution": "CESI Graduate School of Engineering — Strasbourg, France",
+        "description": "Academic exchange focused on digital sciences with a specialization in cybersecurity.",
+        "type": "education",
+        "icon": "fas fa-shield-halved"
+      },
       {
         "year": "2024 – 2027",
         "title": "Engineering Degree in Computer Science",
@@ -168,6 +184,23 @@
   "EXPERIENCE_PAGE": {
     "TITLE": "Professional Experience",
     "ITEMS": [
+      {
+        "period": "Jun 2026 – Aug 2026",
+        "role": "Spring Boot / Angular Developer Intern",
+        "company": "Unilog",
+        "location": "Sfax, Tunisia",
+        "description": "Designed a multi-site warehouse management system in Spring Boot 4 and Angular 19, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger. Secured the APIs with rate limiting via Bucket4j, token-based authentication and RBAC, isolated admin operations on a non-exposed port, and server-side pagination and search across all endpoints.",
+        "technologies": [
+          "Spring Boot",
+          "Angular 19",
+          "PostgreSQL",
+          "Bucket4j",
+          "Spring AI",
+          "Docker"
+        ],
+        "icon": "fas fa-warehouse",
+        "image": ""
+      },
       {
         "period": "Jun 2025 – Aug 2025",
         "role": "Full Stack Developer Intern",
