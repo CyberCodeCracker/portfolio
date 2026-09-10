@@ -83,7 +83,7 @@
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Unilog Warehouse Management",
+      "TITLE": "StockFlow",
       "SHORT_DESCRIPTION": "Un système de gestion d'entrepôts multi-sites avec suivi des stocks en temps réel, développé avec Spring Boot & Angular.",
       "DESCRIPTION": "Dans le cadre de mon stage chez Unilog, j'ai conçu un système de gestion d'entrepôts multi-sites en Spring Boot et Angular 19, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable.\n\nLes API sont sécurisées par une limitation de débit avec Bucket4j, une authentification par jeton et un contrôle d'accès basé sur les rôles (RBAC), avec isolation des opérations d'administration sur un port non exposé, ainsi qu'une pagination et une recherche côté serveur sur tous les points de terminaison.\n\nStack : Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
       "IMAGE_URL": "assets/imgs/logo.png",

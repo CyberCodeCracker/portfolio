@@ -83,7 +83,7 @@
       "VIDEO_URL": ""
     },
     {
-      "TITLE": "Unilog Warehouse Management",
+      "TITLE": "StockFlow",
       "SHORT_DESCRIPTION": "A multi-site warehouse management system with real-time stock tracking, built with Spring Boot & Angular.",
       "DESCRIPTION": "As part of my internship at Unilog, I designed a multi-site warehouse management system in Spring Boot and Angular 19, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger.\n\nThe APIs are secured with rate limiting via Bucket4j, token-based authentication, and role-based access control (RBAC), with admin operations isolated on a non-exposed port, plus server-side pagination and search across all endpoints.\n\nStack: Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
       "IMAGE_URL": "assets/imgs/logo.png",
