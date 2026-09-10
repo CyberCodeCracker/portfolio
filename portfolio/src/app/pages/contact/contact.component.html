@@ -52,22 +52,22 @@
     <form class="contact-form glass" (ngSubmit)="onSubmit()" #contactForm="ngForm">
       <div class="form-group">
         <label for="contact-name">{{ 'CONTACT_PAGE.LABEL_NAME' | translate }}</label>
-        <input type="text" id="contact-name" name="name" [(ngModel)]="formData.name" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_NAME' | translate" />
+        <input type="text" id="contact-name" name="name" [(ngModel)]="formData.name" (ngModelChange)="saveDraft()" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_NAME' | translate" />
       </div>
 
       <div class="form-group">
         <label for="contact-email">{{ 'CONTACT_PAGE.LABEL_EMAIL' | translate }}</label>
-        <input type="email" id="contact-email" name="email" [(ngModel)]="formData.email" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_EMAIL' | translate" />
+        <input type="email" id="contact-email" name="email" [(ngModel)]="formData.email" (ngModelChange)="saveDraft()" required [placeholder]="'CONTACT_PAGE.PLACEHOLDER_EMAIL' | translate" />
       </div>
 
       <div class="form-group">
         <label for="contact-subject">{{ 'CONTACT_PAGE.LABEL_SUBJECT' | translate }}</label>
-        <input type="text" id="contact-subject" name="subject" [(ngModel)]="formData.subject" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_SUBJECT' | translate" />
+        <input type="text" id="contact-subject" name="subject" [(ngModel)]="formData.subject" (ngModelChange)="saveDraft()" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_SUBJECT' | translate" />
       </div>
 
       <div class="form-group">
         <label for="contact-message">{{ 'CONTACT_PAGE.LABEL_MESSAGE' | translate }}</label>
-        <textarea id="contact-message" name="message" [(ngModel)]="formData.message" required rows="5" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_MESSAGE' | translate"></textarea>
+        <textarea id="contact-message" name="message" [(ngModel)]="formData.message" (ngModelChange)="saveDraft()" required rows="5" [placeholder]="'CONTACT_PAGE.PLACEHOLDER_MESSAGE' | translate"></textarea>
       </div>
 
       <button type="submit" class="send-btn" [disabled]="sending || !contactForm.valid">
