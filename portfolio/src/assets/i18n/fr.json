@@ -13,7 +13,7 @@
   "VIEW_PROJECT": "Voir le projet",
   "VIEW_DETAILS": "Voir les détails",
   "WATCH_DEMO": "Voir la démo",
-  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | AWS | .NET | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
+  "ABOUT": "Développeur Full Stack | Angular | Spring Boot | AWS | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
   "PROJECTS_LIST": [
     {
       "TITLE": "GymLite",
@@ -83,6 +83,14 @@
       "VIDEO_URL": ""
     },
     {
+      "TITLE": "Unilog Warehouse Management",
+      "SHORT_DESCRIPTION": "Un système de gestion d'entrepôts multi-sites avec suivi des stocks en temps réel, développé avec Spring Boot & Angular.",
+      "DESCRIPTION": "Dans le cadre de mon stage chez Unilog, j'ai conçu un système de gestion d'entrepôts multi-sites en Spring Boot et Angular 19, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable.\n\nLes API sont sécurisées par une limitation de débit avec Bucket4j, une authentification par jeton et un contrôle d'accès basé sur les rôles (RBAC), avec isolation des opérations d'administration sur un port non exposé, ainsi qu'une pagination et une recherche côté serveur sur tous les points de terminaison.\n\nStack : Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
+      "IMAGE_URL": "assets/imgs/logo.png",
+      "PROJECT_URL": "Le projet est privé",
+      "VIDEO_URL": ""
+    },
+    {
       "TITLE": "Réseau Social de Livres",
       "SHORT_DESCRIPTION": "Une plateforme sociale pour les amateurs de livres afin de partager leurs ouvrages, développée avec Angular & Spring Boot.",
       "DESCRIPTION": "Book Social Network est une application full-stack qui permet aux utilisateurs de gérer leurs collections de livres et d’interagir avec une communauté de passionnés.\n\nElle propose des fonctionnalités telles que l’inscription des utilisateurs, la validation sécurisée par e-mail, la gestion des livres (création, mise à jour, partage et archivage), l’emprunt de livres avec vérification de disponibilité, le retour des livres et l’approbation des retours.\n\nL’application garantit la sécurité grâce aux tokens JWT et respecte les bonnes pratiques de conception des API REST. Le backend est développé avec Spring Boot 3 et Spring Security 6, tandis que le frontend est réalisé avec Angular et Bootstrap pour le style.",
@@ -121,6 +129,14 @@
     "BADGE_CERTIFICATION": "📜 Certification",
     "CREDENTIAL": "Justificatif",
     "ITEMS": [
+      {
+        "year": "Sept. 2026 – Présent",
+        "title": "Échange académique – Ingénieur en Sciences du Numérique, option Cybersécurité",
+        "institution": "CESI École d'Ingénieurs — Strasbourg, France",
+        "description": "Échange académique axé sur les sciences du numérique avec une spécialisation en cybersécurité.",
+        "type": "education",
+        "icon": "fas fa-shield-halved"
+      },
       {
         "year": "2024 – 2027",
         "title": "Diplôme d'ingénieur en informatique",
