@@ -1,6 +1,6 @@
 <header class="header-container" id="main-header">
   <div class="header-inner">
-    <a routerLink="/" class="logo-link">
+    <a href="#home" class="logo-link" (click)="$event.preventDefault(); scrollToTop()">
       <img src="assets/imgs/logo.png" class="logo-float" alt="CyberCodeCracker logo">
     </a>
     <app-menu></app-menu>

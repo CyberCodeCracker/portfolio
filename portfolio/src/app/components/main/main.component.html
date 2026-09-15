@@ -1,5 +1,23 @@
 <app-header></app-header>
 <main class="main">
-  <router-outlet></router-outlet>
+  <section id="home" class="page-section">
+    <app-home></app-home>
+  </section>
+
+  <section id="projects" class="page-section" appReveal>
+    <app-projects></app-projects>
+  </section>
+
+  <section id="education" class="page-section" appReveal>
+    <app-education></app-education>
+  </section>
+
+  <section id="experience" class="page-section" appReveal>
+    <app-experience></app-experience>
+  </section>
+
+  <section id="contact" class="page-section" appReveal>
+    <app-contact></app-contact>
+  </section>
 </main>
 <app-footer id="footer"></app-footer>

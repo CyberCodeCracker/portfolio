@@ -120,3 +120,22 @@ a {
   background: var(--accent-purple);
   color: #fff;
 }
+
+/* ===== Scroll reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

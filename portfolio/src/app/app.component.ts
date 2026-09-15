@@ -1,39 +1,26 @@
 import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { Subscription, filter } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule, HomeComponent]
+  imports: [RouterModule]
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   title = 'portfolio';
   private animationId: number = 0;
-  private particlesPaused = false;
-  private routeSubscription?: Subscription;
 
   @ViewChild('particlesCanvas', { static: false }) canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  constructor(private router: Router) {}
-
   ngAfterViewInit(): void {
     this.initParticles();
-    this.particlesPaused = this.router.url.includes('/projects');
-    this.routeSubscription = this.router.events
-      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
-      .subscribe((event) => {
-        this.particlesPaused = event.urlAfterRedirects.includes('/projects');
-      });
     window.addEventListener('resize', this.handleResize);
   }
 
   ngOnDestroy(): void {
     cancelAnimationFrame(this.animationId);
-    this.routeSubscription?.unsubscribe();
     window.removeEventListener('resize', this.handleResize);
   }
 
@@ -90,7 +77,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      if (this.particlesPaused) {
+      if (document.body.classList.contains('particles-paused')) {
         this.animationId = requestAnimationFrame(animate);
         return;
       }

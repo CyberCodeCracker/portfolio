@@ -8,28 +8,27 @@
 
   <ul class="nav-list" [class.is-open]="menuOpen">
     <li class="nav-item">
-      <a class="nav-link" routerLink="/" routerLinkActive="active"
-         [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+      <a class="nav-link" href="#home" [class.active]="activeSection === 'home'" (click)="$event.preventDefault(); scrollToSection('home')">
         <i class="fas fa-home"></i> {{ "HOME" | translate }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">
+      <a class="nav-link" href="#projects" [class.active]="activeSection === 'projects'" (click)="$event.preventDefault(); scrollToSection('projects')">
         <i class="fas fa-code"></i> {{ "PROJECTS" | translate }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/education" routerLinkActive="active" (click)="closeMenu()">
+      <a class="nav-link" href="#education" [class.active]="activeSection === 'education'" (click)="$event.preventDefault(); scrollToSection('education')">
         <i class="fas fa-graduation-cap"></i> {{ "EDUCATION" | translate }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">
+      <a class="nav-link" href="#experience" [class.active]="activeSection === 'experience'" (click)="$event.preventDefault(); scrollToSection('experience')">
         <i class="fas fa-briefcase"></i> {{ "EXPERIENCE" | translate }}
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">
+      <a class="nav-link" href="#contact" [class.active]="activeSection === 'contact'" (click)="$event.preventDefault(); scrollToSection('contact')">
         <i class="fas fa-envelope"></i> {{ "CONTACT" | translate }}
       </a>
     </li>

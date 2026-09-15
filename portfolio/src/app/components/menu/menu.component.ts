@@ -1,23 +1,53 @@
-import { Component, inject, HostListener } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject, HostListener, OnInit, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit, OnDestroy {
   private translateService = inject(TranslateService);
   menuOpen = false;
+  activeSection = 'home';
+
+  private sectionIds = ['home', 'projects', 'education', 'experience', 'contact'];
+  private sectionObserver?: IntersectionObserver;
 
   constructor() {
     // Language is already initialised by APP_INITIALIZER in main.ts.
     // Do NOT call translate.use() here — it would fire onLangChange after
     // HomeComponent subscribes and break the first-visit typing animation.
+  }
+
+  ngOnInit(): void {
+    this.sectionObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            this.activeSection = entry.target.id;
+          }
+        }
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
+    );
+
+    for (const id of this.sectionIds) {
+      const el = document.getElementById(id);
+      if (el) this.sectionObserver.observe(el);
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.sectionObserver?.disconnect();
+  }
+
+  scrollToSection(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.closeMenu();
   }
 
   toggleMenu() {
