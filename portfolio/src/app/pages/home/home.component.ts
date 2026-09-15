@@ -12,8 +12,10 @@ import { Subscription } from 'rxjs';
   imports: [HeaderComponent, TranslateModule]
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('typedName', { static: false }) typedName!: ElementRef;
   @ViewChild('typedIntro', { static: false }) typedIntro!: ElementRef;
   @ViewChild('typedRest', { static: false }) typedRest!: ElementRef;
+  private readonly authorName = 'Souhail Amouri';
   private langChangeSubscription!: Subscription;
   private typingTimeouts: ReturnType<typeof setTimeout>[] = [];
   // Checked once per session — true only on the very first page load
@@ -46,6 +48,9 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       sessionStorage.setItem('portfolio_visited', 'true');
     }
 
+    const nameEl: HTMLElement = this.typedName.nativeElement;
+    nameEl.textContent = '';
+
     this.translate.get('ABOUT').subscribe((text: string) => {
       const introEl: HTMLElement = this.typedIntro.nativeElement;
       const restEl: HTMLElement  = this.typedRest.nativeElement;
@@ -63,16 +68,17 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       introEl.classList.remove('slide-in');
       restEl.classList.remove('slide-in');
 
+      // Name always uses the type animation; intro/rest always slide in.
+      this.renderInstant(introEl, introLines);
+      this.renderInstant(restEl, restLines);
+      void introEl.offsetWidth; // force reflow so CSS animation fires
+      introEl.classList.add('slide-in');
+      restEl.classList.add('slide-in');
+
       if (doTyping) {
-        this.typeLines(introEl, introLines, 0, () => {
-          this.typeLines(restEl, restLines, 0);
-        });
+        this.typeLines(nameEl, [this.authorName], 0);
       } else {
-        this.renderInstant(introEl, introLines);
-        this.renderInstant(restEl, restLines);
-        void introEl.offsetWidth; // force reflow so CSS animation fires
-        introEl.classList.add('slide-in');
-        restEl.classList.add('slide-in');
+        this.renderInstant(nameEl, [this.authorName]);
       }
     });
   }
@@ -105,7 +111,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
         lineSpan.textContent += lines[lineIdx].charAt(charIdx++);
         this.typingTimeouts.push(setTimeout(typeChar, 15));
       } else {
-        element.appendChild(document.createElement('br'));
+        if (lineIdx < lines.length - 1) element.appendChild(document.createElement('br'));
         this.typingTimeouts.push(
           setTimeout(() => this.typeLines(element, lines, lineIdx + 1, done), 100)
         );

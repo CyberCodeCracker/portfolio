@@ -93,6 +93,12 @@
   display: block;
 }
 
+.author-name .typed-out {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
 .image-animated {
   animation: slideInFromLeft 0.7s ease-out forwards;
 }
