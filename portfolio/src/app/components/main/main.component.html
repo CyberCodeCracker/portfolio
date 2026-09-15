@@ -4,16 +4,20 @@
     <app-home></app-home>
   </section>
 
+  <section id="experience" class="page-section" appReveal>
+    <app-experience></app-experience>
+  </section>
+
+  <section id="education" class="page-section" appReveal>
+    <app-education mode="education"></app-education>
+  </section>
+
   <section id="projects" class="page-section" appReveal>
     <app-projects></app-projects>
   </section>
 
-  <section id="education" class="page-section" appReveal>
-    <app-education></app-education>
-  </section>
-
-  <section id="experience" class="page-section" appReveal>
-    <app-experience></app-experience>
+  <section id="certifications" class="page-section" appReveal>
+    <app-education mode="certification"></app-education>
   </section>
 
   <section id="contact" class="page-section" appReveal>
@@ -21,3 +25,13 @@
   </section>
 </main>
 <app-footer id="footer"></app-footer>
+
+<button
+  type="button"
+  class="back-to-top"
+  [class.visible]="showBackToTop"
+  (click)="scrollToTop()"
+  aria-label="Back to top"
+>
+  <i class="fas fa-arrow-up"></i>
+</button>

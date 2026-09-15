@@ -1,6 +1,7 @@
 <section class="education-section">
   <h2 class="section-title">
-    <i class="fas fa-graduation-cap"></i> {{ 'EDUCATION_PAGE.TITLE' | translate }}
+    <i class="fas" [class.fa-graduation-cap]="mode === 'education'" [class.fa-certificate]="mode === 'certification'"></i>
+    {{ (mode === 'education' ? 'EDUCATION_PAGE.TITLE_EDUCATION' : 'EDUCATION_PAGE.TITLE_CERTIFICATIONS') | translate }}
   </h2>
 
   <div class="timeline">

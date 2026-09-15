@@ -1,6 +1,7 @@
-import { Component, inject, HostListener, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,17 +12,11 @@ import { CommonModule } from '@angular/common';
 })
 export class MenuComponent implements OnInit, OnDestroy {
   private translateService = inject(TranslateService);
-  menuOpen = false;
+  private sidebarService = inject(SidebarService);
   activeSection = 'home';
 
-  private sectionIds = ['home', 'projects', 'education', 'experience', 'contact'];
+  private sectionIds = ['home', 'experience', 'education', 'projects', 'certifications', 'contact'];
   private sectionObserver?: IntersectionObserver;
-
-  constructor() {
-    // Language is already initialised by APP_INITIALIZER in main.ts.
-    // Do NOT call translate.use() here — it would fire onLangChange after
-    // HomeComponent subscribes and break the first-visit typing animation.
-  }
 
   ngOnInit(): void {
     this.sectionObserver = new IntersectionObserver(
@@ -47,28 +42,13 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   scrollToSection(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    this.closeMenu();
-  }
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  closeMenu() {
-    this.menuOpen = false;
+    if (window.innerWidth <= 768) {
+      this.sidebarService.close();
+    }
   }
 
   onChangeLanguage(lang: string) {
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
-    this.closeMenu();
-  }
-
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.nav-menu')) {
-      this.menuOpen = false;
-    }
   }
 }

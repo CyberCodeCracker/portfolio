@@ -1,8 +1,12 @@
-<header class="header-container" id="main-header">
-  <div class="header-inner">
+<aside class="sidebar" [class.collapsed]="collapsed" id="main-header">
+  <div class="sidebar-inner">
     <a href="#home" class="logo-link" (click)="$event.preventDefault(); scrollToTop()">
       <img src="assets/imgs/logo.png" class="logo-float" alt="CyberCodeCracker logo">
     </a>
     <app-menu></app-menu>
   </div>
-</header>
+</aside>
+
+<button class="sidebar-toggle" [class.collapsed]="collapsed" (click)="toggleSidebar()" [attr.aria-label]="collapsed ? 'Open menu' : 'Close menu'">
+  <i class="fas" [class.fa-chevron-left]="!collapsed" [class.fa-chevron-right]="collapsed"></i>
+</button>

@@ -1,25 +1,16 @@
 <nav class="nav-menu">
-  <!-- Hamburger button — only visible on mobile -->
-  <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="lang-switch">
+    <span class="lang-label"><i class="fas fa-globe"></i> {{ "LANGUAGE" | translate }}</span>
+    <div class="lang-options">
+      <button type="button" class="lang-btn" (click)="onChangeLanguage('en')">🇬🇧 English</button>
+      <button type="button" class="lang-btn" (click)="onChangeLanguage('fr')">🇫🇷 Français</button>
+    </div>
+  </div>
 
-  <ul class="nav-list" [class.is-open]="menuOpen">
+  <ul class="nav-list">
     <li class="nav-item">
       <a class="nav-link" href="#home" [class.active]="activeSection === 'home'" (click)="$event.preventDefault(); scrollToSection('home')">
         <i class="fas fa-home"></i> {{ "HOME" | translate }}
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#projects" [class.active]="activeSection === 'projects'" (click)="$event.preventDefault(); scrollToSection('projects')">
-        <i class="fas fa-code"></i> {{ "PROJECTS" | translate }}
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#education" [class.active]="activeSection === 'education'" (click)="$event.preventDefault(); scrollToSection('education')">
-        <i class="fas fa-graduation-cap"></i> {{ "EDUCATION" | translate }}
       </a>
     </li>
     <li class="nav-item">
@@ -28,20 +19,24 @@
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" href="#education" [class.active]="activeSection === 'education'" (click)="$event.preventDefault(); scrollToSection('education')">
+        <i class="fas fa-graduation-cap"></i> {{ "EDUCATION" | translate }}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#projects" [class.active]="activeSection === 'projects'" (click)="$event.preventDefault(); scrollToSection('projects')">
+        <i class="fas fa-code"></i> {{ "PROJECTS" | translate }}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#certifications" [class.active]="activeSection === 'certifications'" (click)="$event.preventDefault(); scrollToSection('certifications')">
+        <i class="fas fa-certificate"></i> {{ "CERTIFICATIONS" | translate }}
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="#contact" [class.active]="activeSection === 'contact'" (click)="$event.preventDefault(); scrollToSection('contact')">
         <i class="fas fa-envelope"></i> {{ "CONTACT" | translate }}
       </a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#"
-         id="navbarDropdown" role="button"
-         data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fas fa-globe"></i> {{ "LANGUAGE" | translate }}
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" (click)="onChangeLanguage('en')">🇬🇧 English</a></li>
-        <li><a class="dropdown-item" (click)="onChangeLanguage('fr')">🇫🇷 Français</a></li>
-      </ul>
     </li>
   </ul>
 </nav>

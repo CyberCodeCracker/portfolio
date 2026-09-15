@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -21,6 +21,8 @@ interface TimelineItem {
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit, OnDestroy {
+  @Input() mode: 'education' | 'certification' = 'education';
+
   timelineItems: TimelineItem[] = [];
   private langChangeSub!: Subscription;
 
@@ -35,7 +37,7 @@ export class EducationComponent implements OnInit, OnDestroy {
 
   private loadItems(): void {
     this.translate.get('EDUCATION_PAGE.ITEMS').subscribe((items: TimelineItem[]) => {
-      this.timelineItems = items;
+      this.timelineItems = items.filter((item) => item.type === this.mode);
     });
   }
 

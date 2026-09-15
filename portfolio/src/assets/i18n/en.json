@@ -4,6 +4,7 @@
   "CONTACT": "Contact",
   "EDUCATION": "Education",
   "EXPERIENCE": "Experience",
+  "CERTIFICATIONS": "Certifications",
   "WELCOME_MESSAGE": "Welcome to my portfolio!",
   "DESCRIPTION": "This is a sample description in English.",
   "SKILLS": "Skills",
@@ -125,6 +126,8 @@
   ],
   "EDUCATION_PAGE": {
     "TITLE": "Education & Certifications",
+    "TITLE_EDUCATION": "Education",
+    "TITLE_CERTIFICATIONS": "Certifications",
     "BADGE_EDUCATION": "🎓 Education",
     "BADGE_CERTIFICATION": "📜 Certification",
     "CREDENTIAL": "Credential",
