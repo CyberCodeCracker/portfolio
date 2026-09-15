@@ -127,7 +127,6 @@
   "EDUCATION_PAGE": {
     "TITLE": "Education & Certifications",
     "TITLE_EDUCATION": "Education",
-    "TITLE_CERTIFICATIONS": "Certifications",
     "BADGE_EDUCATION": "🎓 Education",
     "BADGE_CERTIFICATION": "📜 Certification",
     "CREDENTIAL": "Credential",
@@ -238,6 +237,9 @@
         "icon": "fas fa-robot"
       }
     ]
+  },
+  "CERTIFICATIONS_PAGE": {
+    "TITLE": "Certifications"
   },
   "CONTACT_PAGE": {
     "TITLE": "Get In Touch",

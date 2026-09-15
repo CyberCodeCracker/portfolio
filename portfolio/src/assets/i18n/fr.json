@@ -4,7 +4,7 @@
   "CONTACT": "Contact",
   "EDUCATION": "Éducation",
   "EXPERIENCE": "Expérience",
-  "CERTIFICATIONS": "Certifications",
+  "CERTIFICATIONS": "Formation",
   "WELCOME_MESSAGE": "Bienvenue sur mon portfolio !",
   "DESCRIPTION": "Ceci est une description d'exemple en anglais.",
   "SKILLS": "Compétences",
@@ -127,7 +127,6 @@
   "EDUCATION_PAGE": {
     "TITLE": "Éducation & Certifications",
     "TITLE_EDUCATION": "Éducation",
-    "TITLE_CERTIFICATIONS": "Certifications",
     "BADGE_EDUCATION": "🎓 Éducation",
     "BADGE_CERTIFICATION": "📜 Certification",
     "CREDENTIAL": "Justificatif",
@@ -238,6 +237,9 @@
         "icon": "fas fa-robot"
       }
     ]
+  },
+  "CERTIFICATIONS_PAGE": {
+    "TITLE": "Certifications"
   },
   "CONTACT_PAGE": {
     "TITLE": "Me Contacter",
