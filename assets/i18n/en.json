@@ -18,7 +18,7 @@
   "PROJECTS_LIST": [
     {
       "TITLE": "GymLite",
-      "SHORT_DESCRIPTION": "A microservices e-commerce platform for browsing, buying, and managing gym equipment.",
+      "SHORT_DESCRIPTION": "A microservices e-commerce platform for browsing, buying, and managing gym equipment, built with Spring Boot & Angular.",
       "DESCRIPTION": "GymLite is a full-stack e-commerce application for gym equipment, with an Angular storefront, an admin dashboard, product browsing, cart and checkout flows, order creation, payment handling, and customer authentication.\n\nThe backend is built as Spring Boot microservices with an API Gateway, Eureka service discovery, centralized configuration, JWT security, Kafka notifications, email templates, PostgreSQL and MongoDB persistence, Flyway migrations, Docker Compose infrastructure, and Zipkin tracing.",
       "IMAGE_URL": "assets/imgs/gymlite/landing_light.png",
       "IMAGE_GALLERY": [
@@ -40,7 +40,7 @@
     },
     {
       "TITLE": "FitGear",
-      "SHORT_DESCRIPTION": "An online coaching platform for programs, client progress, and trainer-client follow-up.",
+      "SHORT_DESCRIPTION": "An online coaching platform for programs, client progress, and trainer-client follow-up, built with Spring Boot & Angular.",
       "DESCRIPTION": "FitGear is a full-stack fitness coaching platform that helps trainers manage clients, assign workout programs, review progress, and keep coaching organized in one place.\n\nClients can follow their plans, log workouts, and track their progress through a clean Angular interface, while the Spring Boot backend supports the coaching workflow with structured data and secure APIs.",
       "IMAGE_URL": "assets/imgs/fitgear/landing_page.png",
       "IMAGE_GALLERY": [
@@ -64,7 +64,7 @@
     },
     {
       "TITLE": "Talksy",
-      "SHORT_DESCRIPTION": "A lightweight real-time messaging app for private and group conversations.",
+      "SHORT_DESCRIPTION": "A lightweight real-time messaging app for private and group conversations, built with Spring Boot & Angular.",
       "DESCRIPTION": "Talksy is a modern messaging application inspired by the simplicity of WhatsApp, focused on fast and friendly communication.\n\nIt supports real-time WebSocket chat, one-to-one conversations, group messaging, and secure authentication with access and refresh tokens. The frontend is built with Angular, Bootstrap, and SCSS, while the backend uses Spring Boot, REST APIs, JWT security, and PostgreSQL.",
       "IMAGE_URL": "assets/imgs/talksy/home_page.png",
       "IMAGE_GALLERY": [
