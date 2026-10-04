@@ -12,6 +12,7 @@
   "QUIZ_TITLE": "Quiz",
   "LANGUAGE": "FR",
   "VIEW_PROJECT": "Voir le projet",
+  "PROJECT_PRIVATE": "Ce projet est privé",
   "VIEW_DETAILS": "Voir les détails",
   "WATCH_DEMO": "Voir la démo",
   "ABOUT": "Développeur Full Stack | Angular | Spring Boot | AWS | Passionné de DevOps\n\nJe développe des applications web évolutives, propres et efficaces, en faisant le lien entre les expériences front-end et la logique back-end. Mon stack s'articule autour d'Angular, Spring Boot et .NET, avec une passion croissante pour les pratiques DevOps — CI/CD, automatisation et technologies cloud me stimulent au quotidien.\n\nMais ce n’est pas seulement du code. Quand je ne développe pas, vous me trouverez probablement à la salle de sport, poursuivant la même discipline et progression que j’applique au développement.\n\nPour moi, tout est une question de progression constante — en technologie, en force et dans la vie.",
@@ -80,7 +81,8 @@
       "SHORT_DESCRIPTION": "Gérer les stocks, les clients, les comptes utilisateurs et l'historique des ventes — développé avec Angular & .NET.",
       "DESCRIPTION": "Dans le cadre de mon stage d'été, j'ai développé une application web de gestion conçue pour centraliser la gestion des stocks, des clients, des utilisateurs et de l’historique des ventes.\n\nLa plateforme garantit un suivi précis des stocks, une gestion fiable des clients et un accès basé sur les rôles pour différents types d’utilisateurs.\n\nDéveloppée avec Angular pour le frontend afin d’offrir une expérience interactive et conviviale, et .NET pour le backend afin d’assurer des API sécurisées et une logique métier solide, l’application simplifie les opérations quotidiennes, améliore la cohérence des données et fournit des analyses claires grâce au suivi et aux rapports des ventes.",
       "IMAGE_URL": "assets/imgs/showroom.jpg",
-      "PROJECT_URL": "Le projet est privé",
+      "PROJECT_URL": "",
+      "IS_PRIVATE": true,
       "VIDEO_URL": ""
     },
     {
@@ -88,7 +90,8 @@
       "SHORT_DESCRIPTION": "Un système de gestion d'entrepôts multi-sites avec suivi des stocks en temps réel, développé avec Spring Boot & Angular.",
       "DESCRIPTION": "Dans le cadre de mon stage chez Unilog, j'ai conçu un système de gestion d'entrepôts multi-sites en Spring Boot et Angular 19, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable.\n\nLes API sont sécurisées par une limitation de débit avec Bucket4j, une authentification par jeton et un contrôle d'accès basé sur les rôles (RBAC), avec isolation des opérations d'administration sur un port non exposé, ainsi qu'une pagination et une recherche côté serveur sur tous les points de terminaison.\n\nStack : Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
       "IMAGE_URL": "assets/imgs/unilog/dashboard.png",
-      "PROJECT_URL": "Le projet est privé",
+      "PROJECT_URL": "",
+      "IS_PRIVATE": true,
       "VIDEO_URL": ""
     },
     {
@@ -190,7 +193,6 @@
         "period": "Juillet 2026 – Août 2026",
         "role": "Développeur Full Stack Stagiaire",
         "company": "Unilog",
-        "location": "Sfax, Tunisie",
         "description": "Conception d'un système de gestion d'entrepôts multi-sites en Spring Boot 4 et Angular, avec suivi du stock disponible et réservé sur les cycles d'achat, de vente et de transfert, adossé à un registre de mouvements immuable. Sécurisation des API par limitation de débit avec Bucket4j, authentification par jeton et RBAC, isolation des opérations d'administration sur un port non exposé, pagination et recherche côté serveur sur tous les points de terminaison.",
         "technologies": [
           "Spring Boot",
@@ -207,7 +209,6 @@
         "period": "Juin 2025 – Août 2025",
         "role": "Développeur Full Stack Stagiaire",
         "company": "Avantages Soft",
-        "location": "Sfax, Tunisie",
         "description": "Développement d'une application web de gestion (Showroom) pour la gestion des stocks, des dossiers clients, de l'administration des utilisateurs et de l'historique des ventes. Construit avec Angular côté frontend et .NET côté backend avec SQL Server. Mise en œuvre de l'authentification basée sur JWT et du contrôle d'accès basé sur les rôles.",
         "technologies": [
           "Angular",
@@ -223,7 +224,6 @@
         "period": "Fév 2024 – Juin 2024",
         "role": "Développeur Logiciel Stagiaire",
         "company": "Djagora Foundation",
-        "location": "Sfax, Tunisie",
         "description": "Développement d'un système intelligent de détection de la fatigue des conducteurs, incluant la conception du système, l'implémentation du modèle d'apprentissage profond, la réalisation du système embarqué et le développement de l'application mobile.",
         "technologies": [
           "Dlib",

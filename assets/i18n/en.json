@@ -12,6 +12,7 @@
   "QUIZ_TITLE": "Quiz",
   "LANGUAGE": "EN",
   "VIEW_PROJECT": "View project",
+  "PROJECT_PRIVATE": "This project is private",
   "VIEW_DETAILS": "View details",
   "WATCH_DEMO": "Watch Demo",
   "ABOUT": "Full Stack Developer | Angular | Spring Boot | AWS | DevOps Enthusiast\n\nI build scalable, clean, and efficient web applications, bridging the gap between front-end experiences and back-end logic. My stack revolves around Angular, Spring Boot, and .NET, with a growing fire for DevOps practices — CI/CD, automation, and cloud technologies keep me wired in.\n\nBut it's not just about code. When I'm not engineering software, you'll probably catch me pushing weights in the gym, chasing the same discipline and progress I bring into development.\n\nFor me, it's all about constant growth — in tech, in strength, and in life.",
@@ -80,7 +81,8 @@
       "SHORT_DESCRIPTION": "Manage inventory, clients, user accounts, and sales history — built with Angular & .NET.",
       "DESCRIPTION": "As part of my summer internship, I developed a Management Web Application designed to handle stock, client records, user administration, and sales history in a centralized system.\n\nThe platform ensures accurate inventory tracking, reliable client management, and role-based access for different types of web users.\n\nBuilt with Angular on the frontend for an interactive and user-friendly experience and .NET on the backend for secure APIs and solid business logic, the application streamlines daily operations, improves data consistency, and provides clear insights through historical sales tracking and reporting.",
       "IMAGE_URL": "assets/imgs/showroom.jpg",
-      "PROJECT_URL": "Project is private",
+      "PROJECT_URL": "",
+      "IS_PRIVATE": true,
       "VIDEO_URL": ""
     },
     {
@@ -88,7 +90,8 @@
       "SHORT_DESCRIPTION": "A multi-site warehouse management system with real-time stock tracking, built with Spring Boot & Angular.",
       "DESCRIPTION": "As part of my internship at Unilog, I designed a multi-site warehouse management system in Spring Boot and Angular 19, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger.\n\nThe APIs are secured with rate limiting via Bucket4j, token-based authentication, and role-based access control (RBAC), with admin operations isolated on a non-exposed port, plus server-side pagination and search across all endpoints.\n\nStack: Spring Boot 4.0, Angular 19, PostgreSQL, Bucket4j, Spring AI, Docker.",
       "IMAGE_URL": "assets/imgs/unilog/dashboard.png",
-      "PROJECT_URL": "Project is private",
+      "PROJECT_URL": "",
+      "IS_PRIVATE": true,
       "VIDEO_URL": ""
     },
     {
@@ -190,7 +193,6 @@
         "period": "Jul 2026 – Aug 2026",
         "role": "Full Stack Developer Intern",
         "company": "Unilog",
-        "location": "Sfax, Tunisia",
         "description": "Designed a multi-site warehouse management system in Spring Boot 4 and Angular, tracking available and reserved stock across purchase, sale, and transfer cycles, backed by an immutable movement ledger. Secured the APIs with rate limiting via Bucket4j, token-based authentication and RBAC, isolated admin operations on a non-exposed port, and server-side pagination and search across all endpoints.",
         "technologies": [
           "Spring Boot",
@@ -207,7 +209,6 @@
         "period": "Jun 2025 – Aug 2025",
         "role": "Full Stack Developer Intern",
         "company": "Avantages Soft",
-        "location": "Sfax, Tunisia",
         "description": "Developed a management web application (Showroom) handling stock, client records, user administration, and sales history. Built with Angular on the frontend and .NET on the backend with SQL Server. Implemented JWT-based authentication and role-based access control.",
         "technologies": [
           "Angular",
@@ -223,7 +224,6 @@
         "period": "Feb 2024 – Jun 2024",
         "role": "Software Developer Intern",
         "company": "Djagora Foundation",
-        "location": "Sfax, Tunisia",
         "description": "Development of an Intelligent System for Driver Fatigue Detection, including system design, deep learning model implementation, embedded system realization, and mobile application development.",
         "technologies": [
           "Dlib",
