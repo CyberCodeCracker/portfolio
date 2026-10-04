@@ -10,6 +10,7 @@ export interface Project {
   SHORT_DESCRIPTION: string;
   DESCRIPTION: string;
   PROJECT_URL: string;
+  IS_PRIVATE?: boolean;
   VIDEO_URL?: string;  // optional demo video URL
 } 
 

@@ -15,6 +15,7 @@ export class ProjectCardComponent {
   @Input() projectImageUrl!: string;
   @Input() projectShortDescription!: string;
   @Input() projectUrl!: string;
+  @Input() isPrivate = false;
   @Input() projectDescription: string = '';
   @Input() projectVideoUrl: string = '';
 

@@ -7,6 +7,7 @@
       [projectImageUrl]="project.IMAGE_URL"
       [projectShortDescription]="project.SHORT_DESCRIPTION"
       [projectUrl]="project.PROJECT_URL"
+      [isPrivate]="!!project.IS_PRIVATE"
       [projectDescription]="project.DESCRIPTION"
       [projectVideoUrl]="project.VIDEO_URL || ''"
       (viewProject)="openProject(project)"
@@ -89,12 +90,12 @@
     </ng-template>
 
     <p class="dialog-description">{{ selectedProject!.DESCRIPTION }}</p>
-    <a *ngIf="selectedProject!.PROJECT_URL !== 'Project is private' && selectedProject!.PROJECT_URL !== 'Projet privé'"
+    <a *ngIf="!selectedProject!.IS_PRIVATE"
        [href]="selectedProject!.PROJECT_URL" target="_blank" rel="noopener noreferrer" class="dialog-link">
       <i class="fas fa-external-link-alt"></i> {{ 'VIEW_PROJECT' | translate }}
     </a>
-    <span *ngIf="selectedProject!.PROJECT_URL === 'Project is private' || selectedProject!.PROJECT_URL === 'Projet privé'" class="dialog-link private">
-      <i class="fas fa-lock"></i> {{ selectedProject!.PROJECT_URL }}
+    <span *ngIf="selectedProject!.IS_PRIVATE" class="dialog-link private">
+      <i class="fas fa-lock"></i> {{ 'PROJECT_PRIVATE' | translate }}
     </span>
   </div>
 
