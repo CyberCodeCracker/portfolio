@@ -39,9 +39,7 @@
   object-fit: cover;
   object-position: top center;
   border-radius: 12px;
-  box-shadow:
-    0 0 0 3px rgba(13, 110, 253, 0.6),
-    0 8px 28px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 0 1px rgba(13, 110, 253, 0.6);
   animation: slideInFromLeft 0.7s ease-out forwards;
 }
 

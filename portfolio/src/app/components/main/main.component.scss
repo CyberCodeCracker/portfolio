@@ -11,6 +11,16 @@
   padding-left: 0;
 }
 
+#footer {
+  display: block;
+  padding-left: 220px;
+  transition: padding-left 0.35s ease;
+}
+
+:host-context(body.sidebar-collapsed) #footer {
+  padding-left: 0;
+}
+
 .page-section {
   width: 100%;
   scroll-margin-top: 24px;
@@ -50,7 +60,8 @@
 }
 
 @media (max-width: 768px) {
-  .main {
+  .main,
+  #footer {
     padding-left: 0;
   }
 }
