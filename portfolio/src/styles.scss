@@ -177,6 +177,17 @@ a {
   color: #fff;
 }
 
+/* ===== Language switch fade ===== */
+.main,
+#footer {
+  transition: opacity 0.25s ease;
+}
+
+body.lang-switching .main,
+body.lang-switching #footer {
+  opacity: 0;
+}
+
 /* ===== Scroll reveal ===== */
 .reveal {
   opacity: 0;

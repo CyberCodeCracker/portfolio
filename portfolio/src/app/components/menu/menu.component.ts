@@ -58,8 +58,16 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
 
   onChangeLanguage(lang: string) {
-    this.translateService.use(lang);
-    localStorage.setItem('language', lang);
+    if (lang === this.translateService.currentLang) return;
+
+    document.body.classList.add('lang-switching');
+    setTimeout(() => {
+      this.translateService.use(lang);
+      localStorage.setItem('language', lang);
+      requestAnimationFrame(() => {
+        document.body.classList.remove('lang-switching');
+      });
+    }, 250);
   }
 
   toggleTheme() {
