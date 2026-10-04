@@ -109,11 +109,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     const typeChar = () => {
       if (charIdx < lines[lineIdx].length) {
         lineSpan.textContent += lines[lineIdx].charAt(charIdx++);
-        this.typingTimeouts.push(setTimeout(typeChar, 15));
+        this.typingTimeouts.push(setTimeout(typeChar, 30));
       } else {
         if (lineIdx < lines.length - 1) element.appendChild(document.createElement('br'));
         this.typingTimeouts.push(
-          setTimeout(() => this.typeLines(element, lines, lineIdx + 1, done), 100)
+          setTimeout(() => this.typeLines(element, lines, lineIdx + 1, done), 200)
         );
       }
     };
