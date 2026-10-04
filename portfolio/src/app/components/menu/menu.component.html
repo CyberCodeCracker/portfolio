@@ -39,4 +39,11 @@
       </a>
     </li>
   </ul>
+
+  <div class="theme-switch">
+    <button type="button" class="theme-btn" (click)="toggleTheme()">
+      <i class="fas" [class.fa-moon]="theme === 'light'" [class.fa-sun]="theme === 'dark'"></i>
+      {{ (theme === 'light' ? 'THEME_DARK' : 'THEME_LIGHT') | translate }}
+    </button>
+  </div>
 </nav>

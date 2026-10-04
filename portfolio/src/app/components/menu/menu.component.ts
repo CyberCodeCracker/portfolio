@@ -1,7 +1,9 @@
 import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { Subscription } from 'rxjs';
 import { SidebarService } from '../../services/sidebar.service';
+import { Theme, ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,10 +15,13 @@ import { SidebarService } from '../../services/sidebar.service';
 export class MenuComponent implements OnInit, OnDestroy {
   private translateService = inject(TranslateService);
   private sidebarService = inject(SidebarService);
+  private themeService = inject(ThemeService);
   activeSection = 'home';
+  theme: Theme = 'light';
 
   private sectionIds = ['home', 'experience', 'education', 'projects', 'certifications', 'contact'];
   private sectionObserver?: IntersectionObserver;
+  private themeSub?: Subscription;
 
   ngOnInit(): void {
     this.sectionObserver = new IntersectionObserver(
@@ -34,10 +39,15 @@ export class MenuComponent implements OnInit, OnDestroy {
       const el = document.getElementById(id);
       if (el) this.sectionObserver.observe(el);
     }
+
+    this.themeSub = this.themeService.theme$.subscribe((theme) => {
+      this.theme = theme;
+    });
   }
 
   ngOnDestroy(): void {
     this.sectionObserver?.disconnect();
+    this.themeSub?.unsubscribe();
   }
 
   scrollToSection(id: string) {
@@ -50,5 +60,9 @@ export class MenuComponent implements OnInit, OnDestroy {
   onChangeLanguage(lang: string) {
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
+  }
+
+  toggleTheme() {
+    this.themeService.toggle();
   }
 }

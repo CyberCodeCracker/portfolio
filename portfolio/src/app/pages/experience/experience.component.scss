@@ -19,7 +19,7 @@
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 40px rgba(13, 110, 253, 0.25);
 }
 
 .card-header {
@@ -98,14 +98,14 @@
   border-radius: 20px;
   font-size: 0.78rem;
   font-weight: 600;
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(13, 110, 253, 0.15);
   color: var(--accent-purple);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(13, 110, 253, 0.25);
   transition: all 0.2s ease;
 }
 
 .tag:hover {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(13, 110, 253, 0.3);
   color: #fff;
   transform: translateY(-1px);
 }

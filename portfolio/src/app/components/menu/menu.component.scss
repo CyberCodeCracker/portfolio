@@ -28,7 +28,7 @@
   border-radius: 10px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-secondary) !important;
+  color: var(--chrome-text-muted) !important;
   transition: all 0.25s ease;
   white-space: nowrap;
   cursor: pointer;
@@ -37,14 +37,14 @@
 }
 
 .nav-link:hover {
-  color: var(--text-primary) !important;
-  background: rgba(139, 92, 246, 0.15);
+  color: var(--chrome-text) !important;
+  background: rgba(13, 110, 253, 0.18);
 }
 
 .nav-link.active {
   color: #fff !important;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(196, 113, 237, 0.25));
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.45), rgba(61, 139, 253, 0.3));
+  box-shadow: 0 0 12px rgba(13, 110, 253, 0.3);
 }
 
 .nav-link i {
@@ -56,7 +56,7 @@
 /* ─── Language switch ──────────────────────────────────── */
 .lang-switch {
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--chrome-border);
   width: 100%;
 }
 
@@ -65,7 +65,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.8rem;
-  color: var(--text-secondary, #ccc);
+  color: var(--chrome-text-muted);
   margin-bottom: 8px;
 }
 
@@ -81,13 +81,48 @@
   text-align: left;
   padding: 8px 10px;
   border-radius: 8px;
-  color: var(--text-secondary, #ccc);
+  color: var(--chrome-text-muted);
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .lang-btn:hover {
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(13, 110, 253, 0.25);
   color: #fff;
+}
+
+/* ─── Theme toggle ─────────────────────────────────────── */
+.theme-switch {
+  padding-top: 1rem;
+  margin-top: auto;
+  border-top: 1px solid var(--chrome-border);
+  width: 100%;
+}
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--chrome-text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(13, 110, 253, 0.18);
+  color: var(--chrome-text);
+}
+
+.theme-btn i {
+  font-size: 0.9rem;
+  width: 16px;
+  text-align: center;
 }

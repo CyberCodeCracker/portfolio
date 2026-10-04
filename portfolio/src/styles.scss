@@ -2,25 +2,81 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 :root {
-  /* Colour palette — lavender / pink / purple (matching the reference image) */
-  --bg-dark: #1a0a2e;
-  --bg-gradient-start: #2d1b4e;
-  --bg-gradient-mid: #4a2c6e;
-  --bg-gradient-end: #6b3fa0;
-  --accent-pink: #c471ed;
-  --accent-purple: #8b5cf6;
-  --accent-violet: #7c3aed;
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --card-border: rgba(255, 255, 255, 0.15);
-  --text-primary: #f1e8ff;
-  --text-secondary: #c4b5d8;
-  --text-wrong: #ff0000;
-  --text-correct: #00ff00;
-  --text-muted: #9b8ab5;
-  --glow-purple: rgba(139, 92, 246, 0.5);
-  --glow-pink: rgba(196, 113, 237, 0.4);
-  --gradient-hero: linear-gradient(135deg, #e8a0e8 0%, #c084d8 25%, #a06cc8 50%, #7c4fb8 75%, #5a3d9e 100%);
+  /* Colour palette — white / off-white with Bootstrap blue accents (light theme, default) */
+  --bg-dark: #f7f9fc;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-mid: #eaf2ff;
+  --bg-gradient-end: #cfe2ff;
+  --accent-pink: #3d8bfd;
+  --accent-purple: #0d6efd;
+  --accent-violet: #0a58ca;
+  --card-bg: rgba(13, 110, 253, 0.05);
+  --card-border: rgba(13, 110, 253, 0.15);
+  --text-primary: #1b1f27;
+  --text-secondary: #495057;
+  --text-wrong: #dc3545;
+  --text-correct: #198754;
+  --text-muted: #6c757d;
+  --glow-purple: rgba(13, 110, 253, 0.35);
+  --glow-pink: rgba(61, 139, 253, 0.3);
+  --gradient-hero: linear-gradient(135deg, #ffffff 0%, #eaf2ff 25%, #cfe2ff 50%, #9ec5fe 75%, #0d6efd 100%);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(13, 110, 253, 0.14);
+  --glass-shadow: rgba(13, 110, 253, 0.1);
+
+  /* "Chrome" surfaces (sidebar, footer) stay dark navy in both themes */
+  --chrome-bg: rgba(11, 17, 32, 0.92);
+  --chrome-border: rgba(255, 255, 255, 0.08);
+  --chrome-text: #eaf2ff;
+  --chrome-text-muted: #9fb3c8;
+  --chrome-accent: #3d8bfd;
+
+  /* Hero card text sits on the light end of --gradient-hero */
+  --hero-text: #1a0a2e;
+  --hero-text-secondary: #2d1050;
+
+  --input-bg: rgba(13, 110, 253, 0.04);
+  --input-border: rgba(13, 110, 253, 0.18);
+
+  /* Loose section wrappers — kept near-transparent so the particle
+     background stays visible behind sections like Projects */
+  --section-bg: rgba(13, 110, 253, 0.03);
+  --section-border: rgba(13, 110, 253, 0.1);
+}
+
+:root[data-theme="dark"] {
+  /* Dark theme — navy background with the same Bootstrap blue accents */
+  --bg-dark: #0b1120;
+  --bg-gradient-start: #0d1b2a;
+  --bg-gradient-mid: #10243a;
+  --bg-gradient-end: #123a5e;
+  --accent-pink: #3d8bfd;
+  --accent-purple: #0d6efd;
+  --accent-violet: #6ea8fe;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text-primary: #eaf2ff;
+  --text-secondary: #a9c6e8;
+  --text-wrong: #ff6b6b;
+  --text-correct: #51cf66;
+  --text-muted: #7891ab;
+  --glow-purple: rgba(13, 110, 253, 0.5);
+  --glow-pink: rgba(61, 139, 253, 0.4);
+  --gradient-hero: linear-gradient(135deg, #1b2a4a 0%, #163a63 25%, #0d4f91 50%, #0d6efd 75%, #3d8bfd 100%);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: rgba(0, 0, 0, 0.18);
+
+  /* Hero card sits on the dark end of --gradient-hero here */
+  --hero-text: #eaf2ff;
+  --hero-text-secondary: #cfe2ff;
+
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(255, 255, 255, 0.1);
+
+  --section-bg: rgba(255, 255, 255, 0.045);
+  --section-border: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -60,10 +116,10 @@ app-root {
 #footer {
   flex-shrink: 0;
   text-align: center;
-  background: rgba(26, 10, 46, 0.85);
+  background: var(--chrome-bg);
   backdrop-filter: blur(12px);
-  border-top: 1px solid var(--card-border);
-  color: var(--text-muted);
+  border-top: 1px solid var(--chrome-border);
+  color: var(--chrome-text-muted);
 }
 
 .typed-line {
@@ -79,12 +135,12 @@ a {
 
 /* ===== Glassmorphism utility ===== */
 .glass {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--glass-bg);
   backdrop-filter: blur(18px) saturate(180%);
   -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 32px var(--glass-shadow);
 }
 
 /* ===== Section title utility ===== */

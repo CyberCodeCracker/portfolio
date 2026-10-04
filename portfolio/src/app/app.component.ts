@@ -52,11 +52,11 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     }
 
     const colors = [
-      'rgba(139, 92, 246,',  // purple
-      'rgba(196, 113, 237,', // pink
-      'rgba(124, 58, 237,',  // violet
-      'rgba(167, 139, 250,', // light purple
-      'rgba(232, 160, 232,', // light pink
+      'rgba(13, 110, 253,',  // bootstrap blue
+      'rgba(10, 88, 202,',   // darker blue
+      'rgba(61, 139, 253,',  // mid blue
+      'rgba(110, 168, 254,', // light blue
+      'rgba(158, 197, 254,', // pale blue
     ];
 
     const particles: Particle[] = [];
@@ -76,11 +76,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      if (document.body.classList.contains('particles-paused')) {
-        this.animationId = requestAnimationFrame(animate);
-        return;
-      }
 
       particles.forEach((p) => {
         p.x += p.vx;
@@ -107,7 +102,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(139, 92, 246, ${0.15 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(13, 110, 253, ${0.15 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

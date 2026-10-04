@@ -66,7 +66,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  box-shadow: 0 0 16px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 16px rgba(13, 110, 253, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -87,7 +87,7 @@
 
 .timeline-dot:hover {
   transform: scale(1.15);
-  box-shadow: 0 0 24px rgba(139, 92, 246, 0.7);
+  box-shadow: 0 0 24px rgba(13, 110, 253, 0.7);
 }
 
 .timeline-dot i {
@@ -112,7 +112,7 @@
 
 .timeline-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 40px rgba(13, 110, 253, 0.25);
 }
 
 .timeline-card .badge {
@@ -121,13 +121,13 @@
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(13, 110, 253, 0.2);
   color: var(--accent-pink);
   margin-bottom: 8px;
 }
 
 .timeline-card .badge.cert {
-  background: rgba(196, 113, 237, 0.2);
+  background: rgba(61, 139, 253, 0.2);
   color: var(--accent-pink);
 }
 

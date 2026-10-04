@@ -9,10 +9,10 @@
   bottom: 0;
   width: var(--sidebar-width);
   z-index: 1000;
-  background: rgba(26, 10, 46, 0.9);
+  background: var(--chrome-bg);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid var(--chrome-border);
   transition: transform 0.35s ease;
 }
 
@@ -41,7 +41,7 @@
   height: 90px;
   border-radius: 50%;
   animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+  filter: drop-shadow(0 0 8px rgba(13, 110, 253, 0.4));
   transition: transform 0.3s ease;
 }
 
@@ -70,11 +70,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(26, 10, 46, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--chrome-bg);
+  border: 1px solid var(--chrome-border);
   border-left: none;
   border-radius: 0 10px 10px 0;
-  color: var(--text-secondary, #ccc);
+  color: var(--chrome-text-muted);
   cursor: pointer;
   z-index: 1001;
   transition: left 0.35s ease, background 0.2s ease, color 0.2s ease;
@@ -85,7 +85,7 @@
 }
 
 .sidebar-toggle:hover {
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(13, 110, 253, 0.25);
   color: #fff;
 }
 

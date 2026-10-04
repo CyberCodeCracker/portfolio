@@ -26,27 +26,12 @@ import { RevealDirective } from '../../directives/reveal.directive';
 })
 export class MainComponent implements AfterViewInit, OnDestroy {
   showBackToTop = false;
-  private projectsObserver?: IntersectionObserver;
 
   ngAfterViewInit(): void {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      this.projectsObserver = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            document.body.classList.toggle('particles-paused', entry.isIntersecting);
-          }
-        },
-        { threshold: 0.2 }
-      );
-      this.projectsObserver.observe(projectsSection);
-    }
-
     window.addEventListener('scroll', this.handleScroll, { passive: true });
   }
 
   ngOnDestroy(): void {
-    this.projectsObserver?.disconnect();
     window.removeEventListener('scroll', this.handleScroll);
   }
 
