@@ -5,6 +5,8 @@
   "EDUCATION": "Education",
   "EXPERIENCE": "Experience",
   "CERTIFICATIONS": "Certifications",
+  "THEME_DARK": "Dark mode",
+  "THEME_LIGHT": "Light mode",
   "WELCOME_MESSAGE": "Welcome to my portfolio!",
   "DESCRIPTION": "This is a sample description in English.",
   "SKILLS": "Skills",
